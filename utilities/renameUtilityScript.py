@@ -9,7 +9,7 @@ import os
 def rename():
 
 #Set old dir to the path up until your char folder . Something like: "C:\Users\yourname\Documents\OCR-Handwriting\bin\data\char"
-    oldDir = r"C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\data\char"
+    oldDir = r"C:\Users\mlm14013work\Desktop\OCR-Handwriting\bin\data\char"
     os.chdir(oldDir)
     overallCount = 0;
     #Sets up the walk starting at the char folder.
