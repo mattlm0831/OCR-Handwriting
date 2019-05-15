@@ -17,7 +17,6 @@ def rename():
     for dir, subdirs, files in os.walk(oldDir):
         #Walks all subdirectories, and sets the "count" to 0, this is for naming purposes
         count = 0
-        
         for f in files:
             
             #if it is a readme we don't want to rename, also if it is a directory we don't want to rename it.
@@ -27,7 +26,7 @@ def rename():
             
             d = os.path.basename(dir)
             
-            fnew = d + "_" + (str(0) * (3-len(str(count)))) + str(count) + ".png";
+            fnew = 'a.01.'+ d + "_" + (str(0) * (3-len(str(count)))) + str(count) + ".png";
             #creates the new name, calculates the required number, if we did up to 4 numbers we would need to do 4-len(str(count)) etc
                 
             if(f == fnew):
@@ -47,7 +46,7 @@ def rename():
             #gives a confirmation it worked.
             
             print("Renamed to: " + fnew + "\n")
-            overallCount+= 1;
+            overallCount+=1
             #increments count.
             
             count += 1
