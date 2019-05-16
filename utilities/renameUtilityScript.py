@@ -9,12 +9,34 @@ import os
 def rename():
 
 #Set old dir to the path up until your char folder . Something like: "C:\Users\yourname\Documents\OCR-Handwriting\bin\data\char"
-    oldDir = r"C:\Users\mlm14013work\Desktop\OCR-Handwriting\bin\data\char"
-    os.chdir(oldDir)
+
+    #Created more generality in the script, rather than needing an IDE to change path it is now interactive at the cmd.
+    
+    directory = ""
+    try:
+        pathFile = open("path.txt", "r+")
+    
+    except:
+        pathFile = open("path.txt", "w+")
+    
+    line = []
+    for line in pathFile.readlines(): print(line)
+    
+    
+    if not line:
+            directory = input("Please enter the path of your OCR-Handwriting\char\ file: ")
+            pathFile.write(directory)
+    else:
+        directory = line
+    
+    pathFile.close()
+
+
+    os.chdir(directory)
     overallCount = 0;
     #Sets up the walk starting at the char folder.
     
-    for dir, subdirs, files in os.walk(oldDir):
+    for dir, subdirs, files in os.walk(directory):
         #Walks all subdirectories, and sets the "count" to 0, this is for naming purposes
         count = 0
         for f in files:
