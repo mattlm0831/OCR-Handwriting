@@ -1,2 +1,2 @@
-"python" "Insert the path of your renameUtilityScript.py"
+"python" "Insert the path to \renameUtilityScript.py"
 pause
