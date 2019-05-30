@@ -1,2 +1,2 @@
-"python" "Insert the path to \renameUtilityScript.py"
+"python" "C:\Users\matth\Documents\GitHub\OCR-Handwriting\utilities\renameUtilityScript.py"
 pause
