@@ -1,0 +1,200 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[12pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+
+\usepackage{enumitem}
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\usepackage{dirtree}
+\usepackage{authblk}
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+\title{OCR Handwriting Project Outline}
+\author{Matthew Mulhall}
+\affil{matthew.l.mulhall@uconn.edu}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+
+\section{May 14, 2019}
+\subsection{Summary of Design Decisions}
+
+The project will follow an abstraction based design: letters, words, lines, and entire documents. Every document can be broken down into these respective groups of abstraction.
+
+\begin{enumerate}[label = (\roman*)]
+\item An entire document.
+\item A collection of lines in a document.
+\item A collection of words that are consecutively placed on each line.
+\item Single characters that make up the words.
+\end{enumerate}
+It can be seen that each level abstraction relies on the previous, going all the way down to the individual letters that are on the document. Given the nature of that abstraction Dr. Johnson suggested we start from the ground up, meaning first we will be building the data set for letters, and training a model to recognize other letters of similar (1800's English) style. Our current priority is to build this large data set of characters for our neural network to pull from. After this set is built up we will work on figuring out the optimal design of our model and start to train it. After this section is completed we will have a network that can identify individual characters. From this base level we will then work on the next level of abstraction, that will be able to identify the words in a line. The project will follow a similar style of abstraction based progress until we can use every level to read an entire document.
+
+\subsection{Some specifics}
+We currently have 7 documents that have been allocated for our project. The first 4 will be used to create the data set of images. On top of simple screenshots, we will also employ GPUs to transform the images to get the most mileage out of each photo. The last 3 will be later allocated into development and strict testing sets. These will be allocated as the training set is developed.
+\subsection{Description of file system}
+\dirtree{%
+.1 OCR-Handwriting .
+.2 bin .
+.3 data.
+.4 char .
+.5 ascii lower .
+.6 a to z.
+.5 ascii upper.
+.6 A to Z.
+.5 ascii number.
+.6 0 to 9 .
+.5 compound .
+.5 punctuation .
+.4 documents .
+.5 Training Set.
+.2 documentation .
+.3 Project Log.
+.3 Completion Log.
+.2 utilities .
+}
+\begin{enumerate}[label = (\roman*)]
+\item Bin contains all of the 'raw' data such as images, and documents where the images come from. Each sub directory is ordered.
+\item The section 'compound' has been added due to the nature of John Quincy Adams handwriting. There are several small phrases like 'Mr' and 'Dr' that appear more as one character than 2. This is why it is denoted as 'compound', meaning more than one letter interpreted as a single unit.
+\item Documentation contains this document, as well as any other documents that are needed to explain the project.
+\item Utilities contains all scripts, programs, or software that we use as a supplement in order to complete the project.
+\end{enumerate}
+
+\subsection{Significant Developments}
+\subsubsection{May 14, 2019}
+Total images taken: 296\newline
+\noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
+Matt created a python script that renames the pictures in the subdirectories according to a naming scheme, this allows for saving files without having to worry about typing the name into the save box. Doing this means the whole process takes ~10x less time. When taking photos one can either: focus on a letter saving several in a certain directory (fastest), or save all photos to a "dump" folder and place them afterwards in their correct directory.
+\subsubsection{May 15, 2019}
+Letters completed: 'a' , 'e' . \newline
+Total images taken: 2,075 \newline
+\noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
+\large{Process for quickest imaging (Modified 5/21):}
+\begin{enumerate}[label = (\roman*)]
+\item Pick a letter that has a lower than needed sample size ( < 500).
+\item Using Lightshot, take a screenshot of a letter, and click the save button. Navigate to the respective directory and save.
+\item For all subsequent letters, take the photo and use shortcut CTRL-S and it will auto-save to the same directory.
+\item After you find as many as you can on the page, or several pages, move on to the next page.
+\item After around 125-150 letters from a given set of pages, go onto another set of pages.
+\item Before pushing to git, run the renameUtilityScript.py file which will rename all of the files to the appropriate schema.
+\end{enumerate}
+
+\subsection{May 16, 2019}
+Letters completed: 'b'.\newline
+Total images taken:  864\newline
+\noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
+\begin{enumerate}[label = (\roman*)]
+\item Made changes to the script so that it can be run on any machine without needing to edit the path in the file. If anybody wants to run it, python must be installed and they can either manually run it or write a bat file. There is a provided bat file skeleton, all that needs to be added is the path to the .py utility, and it can be run from anywhere.
+
+\end{enumerate}
+
+\subsection{May 21, 2019}
+Letters completed: 'c', 'd', 'i', 'f', 'g', 'h'\newline
+Total images taken: 3,054\newline
+\noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
+\begin{enumerate}[label = (\roman*)]
+\item Purchased the font "Old Man Eloquent" that we will use to diversify our samples. The current plan is to photograph the font in various contexts and use CUDA to transform the images to extract a large amount of diverse images from one example.
+\item Mike and Matt had a conversation outlining the plan for hardware to be able to transform images. Once the types of image transformations are chosen, Matt will create software that will be able to be used without programming experience.
+\item Matt suggested using an image normalization algorithm to give each image the same scale. It would involve locating the global min and max for width and height, and setting each photo to those dimensions. This could be important for making sure the network does not pick up on unintended scale related differences between letters.
+\end{enumerate}
+
+\subsection{May 22, 2019}
+Letters completed: 'j', 'l', 'm', 'n'\newline
+Total images taken: 1,928 \newline
+\noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
+\begin{enumerate}[label = (\roman*)]
+\item Matt created a completion log complete with all characters so that we can more easily keep track of completed characters.
+\end{enumerate}
+
+\subsection{May 23, 2019}
+Letters completed: 'k', 'o', 'p'\newline
+Total images taken:1,004\newline
+\noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
+\begin{enumerate}[label = (\roman*)]
+\item No important developments today. Good progress on imaging.
+\end{enumerate}
+
+\subsection{May 28, 2019}
+Letters completed: 'q', 'r', 's', 't', 'u'\newline
+Total images taken: 2,244 \newline
+\noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
+\begin{enumerate}[label = (\roman*)]
+\item Today we completed 5 characters towards the end of the alphabet. I have high confidence that by tomorrow we will complete all lowercase imaging. This means we are slightly under halfway to completing the data set
+\item Another important development is that we passed 10,000 images in just 7 working days, a great achievement. We are currently working with: \bf{11,465} images.
+\end{enumerate}
+
+\subsection{May 29, 2019}
+Letters completed: 'v', 'w', 'x', 'y', 'z'\newline
+Total images taken: 1,924 \newline
+\noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
+\begin{enumerate}[label = (\roman*)]
+\item Today I completed 5 characters. Additionally, with the completion of 'z' the entire lowercase alphabet has been concluded. I would venture to say we are likely half way currently. Although there are more than just the upper-case section left, those are far less common and hence will include fewer screenshots.
+\end{enumerate}
+
+\subsection{May 30, 2019}
+Total images taken: 1,001\newline
+\noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
+\begin{enumerate}[label = (\roman*)]
+\item Today I worked from home, the log is being updated retroactively.
+\item The most important development from the day was a change in the way we collect screenshots for the upper case characters. Rather than picking a character and moving through each page for that character, for upper case (or generally less frequent sets of multiple characters) find all examples on the page and screenshot them. After this, move onto the next page.
+\item Because the amount of upper case characters is far lower than lower case letters, we are just taking as many samples as we can get. Therefore there will be no more "letters completed." Upper case letters will be completed when all examples of them are recorded
+\item Finished up to page 17 of DJQA 1829-02.
+\end{enumerate}
+
+\subsection{June 4th, 2019}
+Total images taken: 1,495 \newline
+\noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
+\begin{enumerate}[label = (\roman*)]
+\item Today was a standard day, continued to image the upper case letters.
+\item There was quite a lot of progress in terms of images taken as well as total traversal of the data set. We are almost half way through the data for upper case letters. This puts us in a great position, well over half way done with overall imaging.
+\item Finished up to page 16 of DJQA 1829-03.
+\end{enumerate}
+
+\end{document}
