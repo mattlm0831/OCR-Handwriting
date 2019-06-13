@@ -68,7 +68,7 @@ def rename():
             
             #gives a confirmation it worked.
             
-            print("Renamed" + f + "to: " + fnew + "\n")
+            print("Renamed [" + f + "] to: [" + fnew + "]\n")
             overallCount+=1
             #increments count.
             
