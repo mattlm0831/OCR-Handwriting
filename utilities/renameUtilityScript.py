@@ -2,7 +2,8 @@
 """
 Created on Tue May 14 11:14:41 2019
 
-@author: mlm14013work
+@author: Matthew Mulhall
+
 """
 import os 
 
