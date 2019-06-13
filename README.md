@@ -1,5 +1,5 @@
 # OCR-Handwriting Project
-# Summary of Design Decisions
+<h1> Summary of Design Decisions </h1>
 This project will follow an abstraction based design: letters, words, lines, and entire documents. Every document can be broken down into these respective groups of abstraction.
 
 (i)   An entire document.
