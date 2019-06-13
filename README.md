@@ -14,6 +14,8 @@ It can be seen that each level abstraction relies on the previous, going all the
 Currently the project is in the data collection phase. We have scans of manuscripts from <strong>John Quincy Adams</strong> that we are imaging. The imaging process will conclude shortly after which we will work on building the networks for the various phases of the model. We anticipate a schedule that proceeds as follows:<br/>
 
 <br/>
+<strong>
 (i) Data collection
-(ii)  Model outline
-(iii) Model optimization<br/>
+<br/>(ii)  Model outline
+<br/>(iii) Model optimization<br/>
+</strong>
