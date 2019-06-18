@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.14)  13 JUN 2019 11:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.14)  18 JUN 2019 16:07
 entering extended mode
 **./project-log.tex
 (project-log.tex
@@ -291,18 +291,18 @@ Package: authblk 2001/02/27 1.3 (PWD)
 ) (project-log.aux)
 \openout1 = `project-log.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -413,24 +413,30 @@ Package caption Info: End \AtBeginDocument code.
  [1
 
 {C:/Users/mlm14013work/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] 
-[3] [4] [5] [6] [7] [8] (project-log.aux) ) 
+[3] [4] [5] [6] [7] [8] [9]
+<convnet-test-1-val-acc.png, id=34, 382.42876pt x 252.945pt>
+File: convnet-test-1-val-acc.png Graphic file (type png)
+<use convnet-test-1-val-acc.png>
+Package pdftex.def Info: convnet-test-1-val-acc.png  used on input line 269.
+(pdftex.def)             Requested size: 382.42781pt x 252.94438pt.
+ [10 <./convnet-test-1-val-acc.png>] (project-log.aux) ) 
 Here is how much of TeX's memory you used:
- 4470 strings out of 492945
- 71840 string characters out of 3123144
+ 4479 strings out of 492945
+ 72029 string characters out of 3123144
  150548 words of memory out of 3000000
- 8318 multiletter control sequences out of 15000+200000
+ 8325 multiletter control sequences out of 15000+200000
  5924 words of font info for 22 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,10n,43p,955b,310s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/mlm14013work/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mlm140
-13work/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.p
-fb><C:/Users/mlm14013work/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr17.pfb><C:/Users/mlm14013work/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on project-log.pdf (8 pages, 68827 bytes).
+<C:/Users/mlm14013work/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:
+/Users/mlm14013work/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr12.pfb><C:/Users/mlm14013work/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr17.pfb><C:/Users/mlm14013work/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on project-log.pdf (10 pages, 81090 bytes).
 PDF statistics:
- 45 PDF objects out of 1000 (max. 8388607)
+ 54 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -29,6 +29,7 @@
 \usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
 \usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
 \usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+\usepackage{graphicx}
 % These packages are all incorporated in the memoir class to one degree or another...
 
 %%% HEADERS & FOOTERS
@@ -83,6 +84,7 @@ We currently have 7 documents that have been allocated for our project. The firs
 \dirtree{%
 .1 OCR-Handwriting .
 .2 bin .
+.3 src .
 .3 data.
 .4 char .
 .5 ascii lower .
@@ -233,11 +235,38 @@ Total images taken: 750 \newline
 \end{enumerate}
 
 \subsection{June 13th, 2019}
-Total images taken: \newline
+Total images taken: ~750 \newline
 \noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
 \begin{enumerate}[label = (\roman*)]
 \item Continued imaging of numbers for numbers, currently on DJQA 1829-04 section 19.
 \end{enumerate}
 
+\subsection{June 18th, 2019}
+Letters Completed: ':', comma, period, question mark, exclamation mark.\newline
+Total images taken: \newline
+\noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
+\begin{enumerate}[label = (\roman*)]
+\item Significant imaging of the punctuation set.
+\item The last 2-3 hours were spent on the first iteration of proof of concept.
+\item This proof of concept will focus on making a convnet that properly identifies 4 of our letters with using minimal data altercations. After this we will move to iteration 2 where we simply alter the data. 
+\item After 2 we will most likely open up to more letters and continually scale and test the software.
+\item Phase 1 of the testing was completed. With a data set totaling 2,000 images in 4 categories (namely 'a', 'b', 'c', 'd') Matt constructed a convolutional
+neural network that has a peak of 94.69\% validation accuracy. Note, the network did not use image preproccesing to change the size of the dataset, which will be used in test 2.
+\item The network form that was used in this exercise was as follows:
+\item Model: Sequential
+\item Layer 1: Convolutional 2D
+\item Layer 2: Max Pooling 2D
+\item Layer 3: Convolutional 2D
+\item Layer 4: Max Pooling 2D
+\item Layer 5: Convolutional 2D
+\item Layer 6: Max Pooling 2D
+\item Layer 7: Convolutional 2D
+\item Layer 8: Max Pooling 2D
+\item Layer 9: Flatten
+\item Layer 10: Dense (512)
+\item Layer 11: Dense(4 - categories)
+\item Below is an image that depicts the 'learning' of the model from test 1.
+\item \includegraphics{convnet-test-1-val-acc}
+\end{enumerate}
 
 \end{document}
