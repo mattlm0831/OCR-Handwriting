@@ -269,9 +269,7 @@ neural network that has a peak of 94.69\% validation accuracy. Note, the network
 \item \includegraphics{convnet-test-1-val-acc}
 \end{enumerate}
 
-\subsection{June 18th, 2019}
-Letters Completed: ':', comma, period, question mark, exclamation mark.\newline
-Total images taken: \newline
+\subsection{June 19th, 2019}
 \noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
 \begin{enumerate}[label = (\roman*)]
 \item Today we began with phase two of the small set convnet. The changes will be as follows:\newline
@@ -280,6 +278,10 @@ Total images taken: \newline
 \item After completing the training of the new neural network that used augmentation we got the following results:
 \item \includegraphics{convnet-test-2-val-acc}
 \item As we can see, the tests did well to limit overfitting. However, further tuning is required to get our percentage even higher. Currently it lags at around 96\%
+\item Today I created several important scripts for the project. The first is a utility to automate the entire prediction process of any model. In this file you give a path to an image and the program will predict, and create an image with text that displays the guess and its percentage certainty.
+\item \includegraphics{This_is_d1}
+\item This image shows an example of our second network trained with augmentation predicting a letter 'd'. The catch is, this was written by a different author than our training set!
+\item The second script was a utility for moving through directories and placing photos in respective test/train/validation directories. This is much easier for med-large sets, rather than placing each image manually.
 \end{enumerate}
 
 \end{document}
