@@ -19,6 +19,10 @@ prediction_path_1 = r'C:\Users\mlm14013work\Desktop\OCR-Handwriting\bin\src\test
 prediciton_path_2 = r'C:\Users\mlm14013work\Desktop\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test2\predictions'
 prediction_path_3 = r'C:\Users\mlm14013work\Desktop\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test1\predictions'
 
+model_1 = None
+model_2 = None
+model_3 = None
+
 letterarray = [i for i in ('a','b','c','d')]
 medset_labels  = ['0', '1', '2', '3', '4',
         'a-lower', 'b-lower', 'c-lower',
@@ -39,7 +43,9 @@ def predict_test1(img_path):
     image = img_to_array(image)
     image = np.expand_dims(image, axis=0)
     
+    
     model = models.load_model(model_path1)
+        
     (a, b, c, d) = model.predict(image)[0]
     probs = [a,b,c,d]
     m = max(probs)
@@ -69,6 +75,8 @@ def predict_test2(img_path):
     image = np.expand_dims(image, axis=0)
     
     model = models.load_model(model_path2)
+   
+        
     (a, b, c, d) = model.predict(image)[0]
     probs = [a,b,c,d]
     m = max(probs)
@@ -97,7 +105,10 @@ def predict_test3(img_path):
     image = img_to_array(image)
     image = np.expand_dims(image, axis=0)
     
+
     model = models.load_model(model_path3)
+
+        
     probs = model.predict(image)[0]
     m = max(probs)
     letter = probs.index(m)
@@ -118,10 +129,7 @@ def predict_test3(img_path):
     
 if __name__ == "__main__": 
     args = sys.argv
-    print(args)
-    if len(args) < 2:
-        sys.exit(0)
-    else:
+    if len(args) >= 2:
         if args[1] == '1':
             predict_test1(args[2])
         elif args[1] == '2':
