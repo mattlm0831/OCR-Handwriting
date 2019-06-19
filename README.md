@@ -24,7 +24,7 @@ Currently the project is in the data collection phase. We have scans of manuscri
 
 <h3>3. Current Progress </h3>
 <figure>
-  <img src = 'https://github.com/mattlm0831/OCR-Handwriting/blob/master/bin/src/testing/convnet-smallset-ocr-test2/predictions/This_is_d1.png?raw=true' width = 350 height = 400 alt = 'Example image of a prediction'></img>
+  <img src = 'https://github.com/mattlm0831/OCR-Handwriting/blob/master/bin/src/testing/convnet-smallset-ocr-test2/predictions/This_is_d1.png?raw=true' width = 350 height = 400 alt = 'Example image of a prediction'/>
   <figcaption> Example of our neural network correctly predicting an image from an alternate author. </figcaption>
  </figure>
 <br/>
