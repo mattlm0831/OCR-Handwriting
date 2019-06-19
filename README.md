@@ -28,5 +28,6 @@ Currently the project is in the data collection phase. We have scans of manuscri
   <figcaption> Example of our neural network correctly predicting an image from an alternate author. </figcaption>
  </figure>
 <br/>
-Currently the project is progressing nicely. We are now in a phase of basic R&D where we are using our collected data set to figure out an optimal model (convolution neural network) to categorize the characters.
+<br/>
+Currently the project is progressing nicely. We are now in a phase of basic R&D where we are using our collected data set to figure out an optimal model (convolution neural network) to categorize the characters. We will continually update this page with significant chunks of development. 
 
