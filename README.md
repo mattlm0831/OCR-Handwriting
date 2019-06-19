@@ -16,10 +16,12 @@ Currently the project is in the data collection phase. We have scans of manuscri
 
 <br/>
 <strong>
-(i) Data collection
+(i) Data collection -- Complete
 <br/>(ii)  Model outline
 <br/>(iii) Model optimization<br/>
 </strong>
+
+
 
 
 <h3>3. Current Progress </h3>
