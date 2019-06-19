@@ -12,7 +12,6 @@ import matplotlib.pyplot as plt
 HIST_FILE = r'C:\Users\mlm14013work\Desktop\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test2\history.npy'
 
 def plot(file = HIST_FILE)
-  
   history = np.load(file)
   history = history[()]
 
