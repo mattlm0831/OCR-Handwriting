@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.14)  19 JUN 2019 10:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.14)  19 JUN 2019 14:07
 entering extended mode
 **./project-log.tex
 (project-log.tex
@@ -419,24 +419,30 @@ File: convnet-test-1-val-acc.png Graphic file (type png)
 <use convnet-test-1-val-acc.png>
 Package pdftex.def Info: convnet-test-1-val-acc.png  used on input line 269.
 (pdftex.def)             Requested size: 382.42781pt x 252.94438pt.
- [10 <./convnet-test-1-val-acc.png>] (project-log.aux) ) 
+ [10 <./convnet-test-1-val-acc.png>]
+<convnet-test-2-val-acc.png, id=40, 376.40625pt x 264.99pt>
+File: convnet-test-2-val-acc.png Graphic file (type png)
+<use convnet-test-2-val-acc.png>
+Package pdftex.def Info: convnet-test-2-val-acc.png  used on input line 281.
+(pdftex.def)             Requested size: 376.40532pt x 264.98935pt.
+ [11 <./convnet-test-2-val-acc.png>] (project-log.aux) ) 
 Here is how much of TeX's memory you used:
- 4479 strings out of 492945
- 72029 string characters out of 3123144
+ 4484 strings out of 492945
+ 72178 string characters out of 3123144
  150548 words of memory out of 3000000
- 8325 multiletter control sequences out of 15000+200000
+ 8329 multiletter control sequences out of 15000+200000
  5924 words of font info for 22 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,10n,43p,955b,310s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,10n,43p,955b,312s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/mlm14013work/
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:
 /Users/mlm14013work/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmr12.pfb><C:/Users/mlm14013work/AppData/Local/Programs/MiKTeX 2.9/fonts/
 type1/public/amsfonts/cm/cmr17.pfb><C:/Users/mlm14013work/AppData/Local/Program
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on project-log.pdf (10 pages, 81515 bytes).
+Output written on project-log.pdf (11 pages, 96213 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
+ 59 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

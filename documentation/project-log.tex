@@ -274,10 +274,12 @@ Letters Completed: ':', comma, period, question mark, exclamation mark.\newline
 Total images taken: \newline
 \noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
 \begin{enumerate}[label = (\roman*)]
-\item Today we began with phase two of the small set convnet. The changes will be as follows:
-\subsubsection{} Steps per epoch up to 100, data augmentation (specifics provided in the code).
-
-%\item \includegraphics{}
+\item Today we began with phase two of the small set convnet. The changes will be as follows:\newline
+ Steps per epoch up to 100, data augmentation (specifics provided in the code).
+\item We completed all images today. The total count being 21,515 images. There are still some select images that I believe we will need to address, but this will happen as we continue our push forward in testing.
+\item After completing the training of the new neural network that used augmentation we got the following results:
+\item \includegraphics{convnet-test-2-val-acc}
+\item As we can see, the tests did well to limit overfitting. However, further tuning is required to get our percentage even higher. Currently it lags at around 96\%
 \end{enumerate}
 
 \end{document}
