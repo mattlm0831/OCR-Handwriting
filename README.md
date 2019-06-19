@@ -24,3 +24,6 @@ Currently the project is in the data collection phase. We have scans of manuscri
 
 <h3>3. Current Progress </h3>
 <img src = 'https://github.com/mattlm0831/OCR-Handwriting/blob/master/bin/src/testing/convnet-smallset-ocr-test2/predictions/This_is_d1.png?raw=true' width = 350 height = 400 alt = 'Example image of a prediction'> This is an example of our current model predicting a letter </img>
+<br/>
+Currently the project is progressing nicely. We are now in a phase of basic R&D where we are using our collected data set to figure out an optimal model (convolution neural network) to categorize the characters.
+
