@@ -11,10 +11,11 @@ from keras import models
 from keras.preprocessing.image import img_to_array
 import numpy as np
 import imutils
+import random
 
 model_path1= r'C:\Users\mlm14013work\Desktop\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test1\convnet-smallset-ocr-test1-model.h5'
 model_path2= r'C:/Users/mlm14013work/Desktop/OCR-Handwriting/bin/src/testing/convnet-smallset-ocr-test2/convnet-smallset-ocr-test2-model.h5'
-model_path3 = r''
+model_path3 = r'C:/Users/mlm14013work/Desktop/OCR-Handwriting/bin/src/testing/convnet-medset-ocr-test1/convnet-medset-ocr-test1-model.h5'
 prediction_path_1 = r'C:\Users\mlm14013work\Desktop\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test1\predictions'
 prediciton_path_2 = r'C:\Users\mlm14013work\Desktop\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test2\predictions'
 prediction_path_3 = r'C:\Users\mlm14013work\Desktop\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test1\predictions'
@@ -24,13 +25,7 @@ model_2 = None
 model_3 = None
 
 letterarray = [i for i in ('a','b','c','d')]
-medset_labels  = ['0', '1', '2', '3', '4',
-        'a-lower', 'b-lower', 'c-lower',
-        'd-lower', 'e-lower', 'f-lower',
-        'g-lower',
-        'A-upper', 'B-upper', 'C-upper',
-        'D-upper', 'E-upper', 'F-upper',
-        'G-upper']
+medset_labels  = [i for i in os.listdir(r'C:\Users\mlm14013work\Desktop\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test1\testing-data\train')]
 
 
 def predict_test1(img_path):
@@ -111,9 +106,9 @@ def predict_test3(img_path):
         
     probs = model.predict(image)[0]
     m = max(probs)
-    letter = probs.index(m)
+    a = probs.argmax(axis = 0)
     
-    label = medset_labels[letter] 
+    label = medset_labels[a] 
         
     text = "{}: {:.3f}%".format(label, m*100)
     output = imutils.resize(orig, width = 400)
@@ -139,8 +134,21 @@ if __name__ == "__main__":
     
     
     
+def ranges(max_range, num, path, amount = 30):
     
+    lists = os.listdir(path)
     
+    for i in range(0, amount):
+        index = random.randint(0, max_range)
+        
+        entry = lists[index]
+        
+        if num == 1:
+            predict_test1(os.path.join(path, entry))
+        elif num == 2:
+            predict_test2(os.path.join(path, entry))
+        elif num == 3:
+            predict_test3(os.path.join(path, entry))
     
     
     

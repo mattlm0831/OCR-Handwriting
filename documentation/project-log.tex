@@ -284,4 +284,16 @@ neural network that has a peak of 94.69\% validation accuracy. Note, the network
 \item The second script was a utility for moving through directories and placing photos in respective test/train/validation directories. This is much easier for med-large sets, rather than placing each image manually.
 \end{enumerate}
 
+\subsection{June 20th, 2019}
+\noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
+\begin{enumerate}[label = (\roman*)]
+\item Today I was able to do several things, first and foremost get better plots of the smallset test \#2.
+\item\includegraphics{train-vs-val-acc-small2}\newline \includegraphics{train-vs-val-loss-small2}
+\item As we can see from testing, this second network design, which includes augmentation, has far less over-fitting. This was to be expected, but the results are quite impressive. I suggest that for this second small set model we try varying epochs, and new layers.
+\item Secondly I was able to finish the training of the med-set network, which did not turn out as we would have hoped. But not to be cynical, we will be able to fine tune this.
+\item\includegraphics{train-vs-val-acc-med-1}\newline\includegraphics{train-vs-val-loss-med-1}
+\item Although, on first glance, it appears that the validation accuracy was pretty good (although heavily over-fitted), yet the loss remained above 75\% for the duration of the training. I think that this means a few things, firstly we need to maket the network deeper and use more advanced \textbf{layer techniques}. Secondly, adding augmentation will certainly take a lot of that loss, and over-fitting away. These augmentations to the model will happen next Tuesday.
+\end{enumerate}
+
+
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.14)  19 JUN 2019 15:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.14)  20 JUN 2019 12:56
 entering extended mode
 **./project-log.tex
 (project-log.tex
@@ -435,25 +435,67 @@ Overfull \hbox (12.62003pt too wide) in paragraph at lines 282--283
 [][] 
  []
 
-[11 <./convnet-test-2-val-acc.png>] [12 <./This_is_d1.png (PNG copy)>] [13]
-(project-log.aux) ) 
+[11 <./convnet-test-2-val-acc.png>] [12 <./This_is_d1.png (PNG copy)>]
+<train-vs-val-acc-small2.png, id=49, 433.62pt x 289.08pt>
+File: train-vs-val-acc-small2.png Graphic file (type png)
+<use train-vs-val-acc-small2.png>
+Package pdftex.def Info: train-vs-val-acc-small2.png  used on input line 291.
+(pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
+<train-vs-val-loss-small2.png, id=50, 433.62pt x 289.08pt>
+File: train-vs-val-loss-small2.png Graphic file (type png)
+<use train-vs-val-loss-small2.png>
+Package pdftex.def Info: train-vs-val-loss-small2.png  used on input line 291.
+(pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
+
+Overfull \hbox (44.73996pt too wide) in paragraph at lines 291--292
+[][] 
+ []
+
+
+Overfull \hbox (44.73996pt too wide) in paragraph at lines 291--292
+[] 
+ []
+
+[13 <./train-vs-val-acc-small2.png>]
+<train-vs-val-acc-med-1.png, id=56, 433.62pt x 289.08pt>
+File: train-vs-val-acc-med-1.png Graphic file (type png)
+<use train-vs-val-acc-med-1.png>
+Package pdftex.def Info: train-vs-val-acc-med-1.png  used on input line 294.
+(pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
+<train-vs-val-loss-med-1.png, id=57, 433.62pt x 289.08pt>
+File: train-vs-val-loss-med-1.png Graphic file (type png)
+<use train-vs-val-loss-med-1.png>
+Package pdftex.def Info: train-vs-val-loss-med-1.png  used on input line 294.
+(pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
+
+Overfull \hbox (44.73996pt too wide) in paragraph at lines 294--295
+[][] 
+ []
+
+
+Overfull \hbox (44.73996pt too wide) in paragraph at lines 294--295
+[] 
+ []
+
+[14 <./train-vs-val-loss-small2.png>] [15 <./train-vs-val-acc-med-1.png> <./tra
+in-vs-val-loss-med-1.png>] [16] (project-log.aux) ) 
 Here is how much of TeX's memory you used:
- 4489 strings out of 492945
- 72267 string characters out of 3123144
+ 4509 strings out of 492945
+ 72883 string characters out of 3123144
  150548 words of memory out of 3000000
- 8333 multiletter control sequences out of 15000+200000
+ 8349 multiletter control sequences out of 15000+200000
  5924 words of font info for 22 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,10n,43p,955b,314s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/mlm14013work/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mlm14013work/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mlm14013wor
-k/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C
-:/Users/mlm14013work/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmtt12.pfb>
-Output written on project-log.pdf (13 pages, 178189 bytes).
+ 44i,10n,43p,955b,318s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/mlm14013work/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/User
+s/mlm14013work/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr12.pfb><C:/Users/mlm14013work/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr17.pfb><C:/Users/mlm14013work/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on project-log.pdf (16 pages, 235461 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
+ 84 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
