@@ -30,6 +30,7 @@
 \usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
 \usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
 \usepackage{graphicx}
+\usepackage[colorlinks, urlcolor=cyan, citecolor=red]{hyperref}
 % These packages are all incorporated in the memoir class to one degree or another...
 
 %%% HEADERS & FOOTERS
@@ -300,6 +301,21 @@ neural network that has a peak of 94.69\% validation accuracy. Note, the network
 \begin{enumerate}[label = (\roman*)]
 \item Based on the poor showing of the previous model, to start the day I will try and modify it in a second medium test. This test will aim to bring the loss as low as possible.
 \item Rather than continually attempting to adjust layers, I believe it would be intelligent to do the changes in batches and closely analyze the difference between each method. First we are adding data augmentation to the second test. After, we will move onto layer changes.
+\item \textbf{Today I switched work stations to a computer with a GTX 1080, because of this, training time has decreased by 90\%}.
+\item The following is the model design used in test 'medset-2', this model included augmented training images, defined by the parameters available on \href{https://github.com/mattlm0831/OCR-Handwriting/blob/master/bin/src/testing/convnet-medset-ocr-test2/convnet-medset-ocr-test2.py}{github}.
+\item \includegraphics[height = 200mm, scale=.5]{model-medset2}
+\item This model performed much better than the previous iteration due to augmentation. Albeit, still below our goals. The following graphics show that this model did much better dealing with overfitting:
+\item \includegraphics{train-vs-val-acc-medset2}
+\item \includegraphics{train-vs-val-loss-medset2}
+\item Some other important takeaways: Loss was kept far lower, decreased by 30\%\textsuperscript{+} relative to the previous test. Accuracy remained lower than previous attempts at 85\%, but in this context the lower accuracy is not a negative as it coincides with a falling loss value.
+\item After feeling confident about the network structure in test 'medset-2' I continued onto test 'medset-3' to try and further the progress. The only difference for this test (medset-3) was doubling the epochs. I decided to make this choice because the network seemed to be continually improving, rather than reaching a plateu before 100 epochs. Continuing the training further has seemed to do a great deal of relative improvement on both loss and accuracy. The next test 'medset-4', will have to focus on continuing with this and perhaps extending even further if a plateu is not reached in the previous test.
+\item Although the results are not perfect at the moment, in a mere day we have been able to take loss from .7 in medset1 to ~.28 in medset3.
+\item As can be seen from the two following graphs, increasing epochs did translate to an increase in accuracy and decrease in loss (~90\% and ~28\% respectively). This bodes well for the future, we can use this to further explore techniques of training as a road to better results as well as hyper parameters.
+\item \includegraphics{train-vs-val-acc-medset3}
+\item \includegraphics{train-vs-val-loss-medset3}
+
+
+
 \end{enumerate}
 
 
