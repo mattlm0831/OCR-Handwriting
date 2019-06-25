@@ -292,7 +292,14 @@ neural network that has a peak of 94.69\% validation accuracy. Note, the network
 \item As we can see from testing, this second network design, which includes augmentation, has far less over-fitting. This was to be expected, but the results are quite impressive. I suggest that for this second small set model we try varying epochs, and new layers.
 \item Secondly I was able to finish the training of the med-set network, which did not turn out as we would have hoped. But not to be cynical, we will be able to fine tune this.
 \item\includegraphics{train-vs-val-acc-med-1}\newline\includegraphics{train-vs-val-loss-med-1}
-\item Although, on first glance, it appears that the validation accuracy was pretty good (although heavily over-fitted), yet the loss remained above 75\% for the duration of the training. I think that this means a few things, firstly we need to maket the network deeper and use more advanced \textbf{layer techniques}. Secondly, adding augmentation will certainly take a lot of that loss, and over-fitting away. These augmentations to the model will happen next Tuesday.
+\item Although, on first glance, it appears that the validation accuracy was pretty good (although heavily over-fitted), yet the loss remained above 75\% for the duration of the training. I think that this means a few things, firstly we need to make the network deeper and use more advanced \textbf{layer techniques}. Secondly, adding image augmentation will certainly take a lot of that loss, and over-fitting away. These augmentations to the model will happen next Tuesday.
+\end{enumerate}
+
+\subsection{June 25th, 2019}
+\noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
+\begin{enumerate}[label = (\roman*)]
+\item Based on the poor showing of the previous model, to start the day I will try and modify it in a second medium test. This test will aim to bring the loss as low as possible.
+\item Rather than continually attempting to adjust layers, I believe it would be intelligent to do the changes in batches and closely analyze the difference between each method. First we are adding data augmentation to the second test. After, we will move onto layer changes.
 \end{enumerate}
 
 
