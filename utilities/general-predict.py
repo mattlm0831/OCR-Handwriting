@@ -17,7 +17,7 @@ model_path1= r'C:\Users\mlm14013work\Desktop\OCR-Handwriting\bin\src\testing\con
 model_path2= r'C:/Users/mlm14013work/Desktop/OCR-Handwriting/bin/src/testing/convnet-smallset-ocr-test2/convnet-smallset-ocr-test2-model.h5'
 model_path3 = r'C:/Users/mlm14013work/Desktop/OCR-Handwriting/bin/src/testing/convnet-medset-ocr-test1/convnet-medset-ocr-test1-model.h5'
 model_path4 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test2\convnet-medset-ocr-test2-model.h5'
-model_path5 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test3\convnet-medset-ocr-test3-model.h5'
+model_path5 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test3\convnet-medset-ocr-test31-model.h5'
 prediction_path_1 = r'C:\Users\mlm14013work\Desktop\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test1\predictions'
 prediciton_path_2 = r'C:\Users\mlm14013work\Desktop\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test2\predictions'
 prediction_path_3 = r'C:\Users\mlm14013work\Desktop\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test1\predictions'
@@ -30,8 +30,7 @@ model_2 = None
 model_3 = None
 
 letterarray = [i for i in ('a','b','c','d')]
-medset_labels  = [i for i in os.listdir(r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test1\testing-data\train')]
-
+medset_labels = ['0', '1', '2', '3', '4', 'A-upper', 'B-upper', 'C-upper', 'D-upper', 'E-upper', 'F-upper', 'G-upper', 'a-lower', 'b-lower', 'c-lower', 'd-lower', 'e-lower', 'f-lower', 'g-lower']
 
 def predict_test1(img_path):
     

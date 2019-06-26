@@ -21,7 +21,7 @@ medset_3 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\con
 
 mdl_path1 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test1\convnet-smallset-ocr-test1-model.h5'
 mdl_path4 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test2\convnet-medset-ocr-test2-model.h5'
-mdl_path5 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test\convnet-medset-ocr-test3-model.h5'
+mdl_path5 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test3\convnet-medset-ocr-test31-model.h5'
 
 
 def plot(file = None, obj = None):
