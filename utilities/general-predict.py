@@ -154,7 +154,7 @@ def predict_test4(img_path):
     cv2.waitKey(0) 
     l = len(os.listdir(prediction_path_4))
     name = 'This_is_' + str(label) + str(l+1) + '.png'
-    cv2.imwrite(os.path.join(prediction_path_3, name), output)   
+    cv2.imwrite(os.path.join(prediction_path_4, name), output)   
     print("Prediction created:" + name) 
     
     
@@ -186,7 +186,7 @@ def predict_test5(img_path):
     cv2.waitKey(0) 
     l = len(os.listdir(prediction_path_5))
     name = 'This_is_' + str(label) + str(l+1) + '.png'
-    cv2.imwrite(os.path.join(prediction_path_3, name), output)   
+    cv2.imwrite(os.path.join(prediction_path_5, name), output)   
     print("Prediction created:" + name) 
     
     
