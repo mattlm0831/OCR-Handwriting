@@ -122,6 +122,7 @@ We currently have 7 documents that have been allocated for our project. The firs
 \item imutils
 \item GraphViz
 \item Matplotlib
+\item PyDot
 \end{enumerate}
 
 \subsection{Significant Developments}
@@ -327,7 +328,18 @@ neural network that has a peak of 94.69\% validation accuracy. Note, the network
 \item As can be seen from the two following graphs, increasing epochs did translate to an increase in accuracy and decrease in loss (~90\% and ~28\% respectively). This bodes well for the future, we can use this to further explore techniques of training as a road to better results as well as hyper parameters.
 \item \includegraphics{train-vs-val-acc-medset3}
 \item \includegraphics{train-vs-val-loss-medset3}
+\end{enumerate}
 
+\subsection{June 26th, 2019}
+\noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
+\begin{enumerate}[label = (\roman*)]
+\item Today I decided to train another model on the medium test set. This model will have several differences and similarities. It will be trained longer (250 epochs), have 64 for batch size, and will also have two dropout layers added. This model, denoted as medset4, will have the following form:
+\item \includegraphics[height = 200mm, scale=.5]{model-medset4}
+\item This model performed very well. Pushing our loss further to a cool 21\% and accuracy up to 93\%. 
+\item The models performance can be seen here:
+\newline\includegraphics{train-vs-val-acc-medset4}
+\newline\includegraphics{train-vs-val-loss-medset4}
+\item The following test, medset5, will continue the progress of 4. Primarily we will introduce batch normalization to the model.
 
 
 \end{enumerate}

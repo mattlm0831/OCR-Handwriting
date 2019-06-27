@@ -5,9 +5,9 @@ Created on Tue Jun 18 14:39:58 2019
 @author: Matthew Mulhall
 """
 
-TRAIN_DIR = r'C:\Users\mlm14013work\Desktop\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test1\testing-data\train'
-VALIDATION_DIR = r'C:\Users\mlm14013work\Desktop\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test1\testing-data\validation'
-TEST_DIR = r'C:\Users\mlm14013work\Desktop\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test1\testing-data\test'
+TRAIN_DIR = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test1\testing-data\train'
+VALIDATION_DIR = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test1\testing-data\validation'
+TEST_DIR = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test1\testing-data\test'
 
 import matplotlib.pyplot as plt
 from keras import layers
@@ -49,3 +49,10 @@ validation_generator =  test_datagen.flow_from_directory(
         batch_size=20,
         class_mode= 'categorical')
 
+history = model.fit_generator(train_generator,
+                              steps_per_epoch= 100,
+                              epochs=100,
+                              validation_data= validation_generator,
+                              validation_steps=50)
+
+model.save('convnet-smallset-ocr-test2-model.h5')
