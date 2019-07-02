@@ -19,6 +19,7 @@ new_hist = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\con
 medset_2 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test2'
 medset_3 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test3'
 medset_4 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test4'
+med_set5 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test5'
 
 
 
@@ -27,18 +28,21 @@ mdl_path2 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\co
 mdl_path4 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test2\convnet-medset-ocr-test2-model.h5'
 mdl_path5 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test3\convnet-medset-ocr-test31-model.h5'
 mdl_path6 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test4\convnet-medset-ocr-test4-model.h5'
+mdl_path6 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test4\convnet-medset-ocr-test4-model.h5'
 
 
-def plot(file = None, obj = None):
+def plot(file = None, name = None):
     
-     if not obj and not file:
+     history = None
+     if not name and not file:
          return "Cannot operate on nothing"
      
-     if not obj:
+     if not name:
          history = np.load(os.path.join(file, 'history.npy'))
          history = history[()]
-     if not file:
-         history = obj
+     if file and name:
+         history = np.load(os.path.join(file, name))
+         history = history[()]
      acc = history.history['acc']
      val_acc= history.history['val_acc']
      loss = history.history['loss']
@@ -50,8 +54,11 @@ def plot(file = None, obj = None):
      plt.plot(epochs, val_acc, 'b', label='Validation Accuracy', color = '#991A00', linewidth = 2)
      plt.title('Training and Validation Accuracy')
      plt.legend()
-     
-     plt.savefig(os.path.join(file, 'train-vs-val-acc.png'))
+     plt.axis([0, len(acc)+1,.60,1.0])
+     if name:
+         plt.savefig(os.path.join(file, 'acc_' + name + '.png'))
+     else:
+         plt.savefig(os.path.join(file, 'train-vs-val-acc.png'))
      plt.figure()
      
     
@@ -61,8 +68,11 @@ def plot(file = None, obj = None):
      plt.plot(epochs, val_loss, 'b', label = 'Validation Loss', color = '#991A00', linewidth = 2)
      plt.title('Training and Validation Loss')
      plt.legend()
-     
-     plt.savefig(os.path.join(file, 'train-vs-val-loss.png'))
+     plt.axis([0,len(acc)+1,.0,.80])
+     if name:
+         plt.savefig(os.path.join(file, 'loss_' + name + '.png'))
+     else:
+         plt.savefig(os.path.join(file, 'train-vs-val-loss.png'))
      plt.figure()
      
 

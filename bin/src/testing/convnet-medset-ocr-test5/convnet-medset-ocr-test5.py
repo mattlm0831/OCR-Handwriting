@@ -11,68 +11,70 @@ TEST_DIR = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\con
 from keras import layers
 from keras import models 
 from keras import optimizers
+from keras.applications import VGG16
 from keras.preprocessing.image import ImageDataGenerator
 import numpy as np
 
-model = models.Sequential()
+conv_base = VGG16(weights = 'imagenet', include_top=False, input_shape=(150,150,3))
+conv_base.trainable = False
 
-model.add(layers.Conv2D(32, (3,3), input_shape=(150,150,3)))
-model.add(layers.BatchNormalization())
-model.add(layers.Activation(activation = 'relu'))
-model.add(layers.MaxPooling2D((2, 2)))
+def compile_model():
+    
+    model = models.Sequential()
 
-model.add(layers.Conv2D(64, (3, 3)))
-model.add(layers.BatchNormalization())
-model.add(layers.Activation(activation = 'relu'))
-model.add(layers.MaxPooling2D((2, 2)))
+    model.add(layers.Conv2D(32, (3,3), activation='relu',
+                            input_shape=(150,150,3)))
+    model.add(layers.MaxPooling2D((2, 2)))
+    model.add(layers.Conv2D(64, (3, 3), activation = 'relu'))
+    model.add(layers.MaxPooling2D((2, 2)))
+    model.add(layers.Dropout(rate = .25))
+    model.add(layers.Conv2D(128, (3, 3), activation = 'relu'))
+    model.add(layers.MaxPooling2D((2, 2)))
+    model.add(layers.Conv2D(256, (3, 3), activation = 'relu'))
+    model.add(layers.MaxPooling2D((2, 2)))
+    model.add(layers.Dropout(rate = .25))
+    model.add(layers.Conv2D(512, (3, 3), activation = 'relu'))
+    model.add(layers.MaxPooling2D((2, 2)))
+    model.add(layers.Dropout(rate = .25))
+    model.add(layers.Flatten())
+    model.add(layers.Dense(512, activation='relu'))
+    model.add(layers.Dense(19, activation='softmax'))
+    
+    
+    model.compile(loss='categorical_crossentropy',
+                  optimizer=optimizers.RMSprop(lr=1e-4),
+                  metrics = ['acc'])
+    return model
 
-model.add(layers.Dropout(rate = .25))
+def train_model(model):
 
-model.add(layers.Conv2D(128, (3, 3)))
-model.add(layers.Activation(activation = 'relu'))
-model.add(layers.MaxPooling2D((2, 2)))
-
-model.add(layers.Conv2D(128, (3, 3)))
-model.add(layers.Activation(activation = 'relu'))
-model.add(layers.MaxPooling2D((2, 2)))
-
-model.add(layers.Dropout(rate = .25))
-
-model.add(layers.Flatten())
-model.add(layers.Dense(512, activation='relu'))
-model.add(layers.Dense(19, activation='softmax'))
-
-
-model.compile(loss='categorical_crossentropy',
-              optimizer=optimizers.RMSprop(lr=1e-4),
-              metrics = ['acc'])
-
-train_datagen = ImageDataGenerator(rescale=1./255,
-                                   rotation_range=40,
-                                   width_shift_range=0.2,
-                                   height_shift_range=0.2,
-                                   shear_range=0.2,
-                                   zoom_range=0.2,
-                                   horizontal_flip = True)
-
-test_datagen = ImageDataGenerator(rescale=1./255)
-
-train_generator= train_datagen.flow_from_directory(
-        TRAIN_DIR,
-        target_size=(150,150),
-        batch_size=64,
-        class_mode= 'categorical')
-validation_generator =  test_datagen.flow_from_directory(
-        VALIDATION_DIR,
-        target_size=(150,150),
-        batch_size=64,
-        class_mode= 'categorical')
-
-history = model.fit_generator(train_generator,
-                              steps_per_epoch= 100,
-                              epochs=250,
-                              validation_data= validation_generator,
-                              validation_steps=50)
-
-model.save('convnet-medset-ocr-test5.0-model.h5')
-np.save("history.npy", history)
+    train_datagen = ImageDataGenerator(rescale=1./255,
+                                       rotation_range=40,
+                                       width_shift_range=0.2,
+                                       height_shift_range=0.2,
+                                       shear_range=0.2,
+                                       zoom_range=0.2,
+                                       horizontal_flip = True,
+                                       fill_mode = 'nearest')
+    
+    test_datagen = ImageDataGenerator(rescale=1./255)
+    
+    train_generator= train_datagen.flow_from_directory(
+            TRAIN_DIR,
+            target_size=(150,150),
+            batch_size=64,
+            class_mode= 'categorical')
+    validation_generator =  test_datagen.flow_from_directory(
+            VALIDATION_DIR,
+            target_size=(150,150),
+            batch_size=64,
+            class_mode= 'categorical')
+    
+    history = model.fit_generator(train_generator,
+                                  steps_per_epoch= 100,
+                                  epochs=250,
+                                  validation_data= validation_generator,
+                                  validation_steps=50)
+    
+    model.save('convnet-medset-ocr-test5.3-model.h5')
+    np.save("history5.3.npy", history)
