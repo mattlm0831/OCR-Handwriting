@@ -4,9 +4,9 @@ Created on Wed Jun 19 14:42:27 2019
 
 @author: Matthew Mulhall
 """
-TRAIN_DIR = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test3\testing-data\train'
-VALIDATION_DIR = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test3\testing-data\validation'
-TEST_DIR = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test3\testing-data\test'
+TRAIN_DIR = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test5\testing-data\train'
+VALIDATION_DIR = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test5\testing-data\validation'
+TEST_DIR = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test5\testing-data\test'
 
 from keras import layers
 from keras import models 
@@ -16,17 +16,28 @@ import numpy as np
 
 model = models.Sequential()
 
-model.add(layers.Conv2D(32, (3,3), activation='relu',
-                        input_shape=(150,150,3)))
+model.add(layers.Conv2D(32, (3,3), input_shape=(150,150,3)))
+model.add(layers.BatchNormalization())
+model.add(layers.Activation(activation = 'relu'))
 model.add(layers.MaxPooling2D((2, 2)))
-model.add(layers.Conv2D(64, (3, 3), activation = 'relu'))
+
+model.add(layers.Conv2D(64, (3, 3)))
+model.add(layers.BatchNormalization())
+model.add(layers.Activation(activation = 'relu'))
 model.add(layers.MaxPooling2D((2, 2)))
+
 model.add(layers.Dropout(rate = .25))
-model.add(layers.Conv2D(128, (3, 3), activation = 'relu'))
+
+model.add(layers.Conv2D(128, (3, 3)))
+model.add(layers.Activation(activation = 'relu'))
 model.add(layers.MaxPooling2D((2, 2)))
-model.add(layers.Conv2D(128, (3, 3), activation = 'relu'))
+
+model.add(layers.Conv2D(128, (3, 3)))
+model.add(layers.Activation(activation = 'relu'))
 model.add(layers.MaxPooling2D((2, 2)))
+
 model.add(layers.Dropout(rate = .25))
+
 model.add(layers.Flatten())
 model.add(layers.Dense(512, activation='relu'))
 model.add(layers.Dense(19, activation='softmax'))
@@ -63,5 +74,5 @@ history = model.fit_generator(train_generator,
                               validation_data= validation_generator,
                               validation_steps=50)
 
-model.save('convnet-medset-ocr-test4-model.h5')
+model.save('convnet-medset-ocr-test5.0-model.h5')
 np.save("history.npy", history)
