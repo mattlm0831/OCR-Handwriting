@@ -340,9 +340,21 @@ neural network that has a peak of 94.69\% validation accuracy. Note, the network
 \newline\includegraphics{train-vs-val-acc-medset4}
 \newline\includegraphics{train-vs-val-loss-medset4}
 \item The following test, medset5, will continue the progress of 4. Primarily we will introduce batch normalization to the model.
-
-
 \end{enumerate}
 
-
+\subsection{July 5th, 2019}
+\noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
+\begin{enumerate}[label = (\roman*)]
+\item The gap in timing for updates has been due to the stall in model improvements over the last week.
+\item As we continue to push forward in our efforts, we will most likely see that once we reach a certain point, the gains will take longer to achieve.
+\item We are currently still on the medium test set, 19 images, and will continue to develop the model until we feel that our performance is as high as we would like. The work that is going on now is heavily tuning the hyper parameters of our most successful model so far. The hope is that by varying these parameters, we can find an optimal model for our next test which will involve a larger set of characters.
+\item Most of these tests have yielded sporadic results. None of them were awful, but none of them yielded better results.
+\item The following has been tried so far: Increasing dropout, decreasing batch size, adding batch normalization, adding convolution layers.
+\item So far it seems like the road ahead will consist of doing this tuning for several weeks and seeing what we can get from it. I would estimate that if we can't get further than 93\% after a month or two then we will need to go back and gather more data, which very well may be necessary.
+\item I am currently running the last training test of the day, and am hopeful that this will provide a useful direction to take the model.
+\item The results are as follows:
+\item \includegraphics{acc_history5v4}
+\item \includegraphics{loss_history5v4}
+\item The results are preliminarily good, and I believe that we will be able to work to improve this version.
+\end{enumerate}
 \end{document}

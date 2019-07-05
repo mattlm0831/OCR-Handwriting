@@ -4,8 +4,8 @@ Created on Wed Jun 19 14:42:27 2019
 
 @author: Matthew Mulhall
 """
-TRAIN_DIR = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test5\testing-data\train'
-VALIDATION_DIR = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test5\testing-data\validation'
+TRAIN_DIR = r'C:\Users\matth\Desktop\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test5\testing-data\train'
+VALIDATION_DIR = r'C:\Users\matth\Desktop\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test5\testing-data\validation'
 TEST_DIR = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test5\testing-data\test'
 
 from keras import layers
@@ -14,9 +14,10 @@ from keras import optimizers
 from keras.applications import VGG16
 from keras.preprocessing.image import ImageDataGenerator
 import numpy as np
-
-conv_base = VGG16(weights = 'imagenet', include_top=False, input_shape=(150,150,3))
-conv_base.trainable = False
+import tensorflow as tf
+config = tf.compat.v1.ConfigProto()
+config.gpu_options.allow_growth = True
+session = tf.compat.v1.Session(config = config)
 
 def compile_model():
     
@@ -35,7 +36,6 @@ def compile_model():
     model.add(layers.Dropout(rate = .25))
     model.add(layers.Conv2D(512, (3, 3), activation = 'relu'))
     model.add(layers.MaxPooling2D((2, 2)))
-    model.add(layers.Dropout(rate = .25))
     model.add(layers.Flatten())
     model.add(layers.Dense(512, activation='relu'))
     model.add(layers.Dense(19, activation='softmax'))
@@ -62,19 +62,21 @@ def train_model(model):
     train_generator= train_datagen.flow_from_directory(
             TRAIN_DIR,
             target_size=(150,150),
-            batch_size=64,
+            batch_size=32,
             class_mode= 'categorical')
     validation_generator =  test_datagen.flow_from_directory(
             VALIDATION_DIR,
             target_size=(150,150),
-            batch_size=64,
+            batch_size=32,
             class_mode= 'categorical')
     
     history = model.fit_generator(train_generator,
                                   steps_per_epoch= 100,
-                                  epochs=250,
+                                  epochs=300,
                                   validation_data= validation_generator,
                                   validation_steps=50)
     
-    model.save('convnet-medset-ocr-test5.3-model.h5')
-    np.save("history5.3.npy", history)
+    model.save('convnet-medset-ocr-test5.4-model.h5')
+    np.save("history5.4.npy", history)
+
+

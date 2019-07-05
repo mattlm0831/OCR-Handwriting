@@ -7,8 +7,8 @@ Created on Wed Jun 19 14:09:23 2019
 
 import os, shutil
 
-ROOT_DIR = r'C:\Users\mlm14013work\Desktop\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test1\testing-data'
-original_data_dir = r'C:\Users\mlm14013work\Desktop\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test1\testing-data\original-data'
+ROOT_DIR = r'C:\Users\matth\Desktop\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test5\testing-data'
+original_data_dir = r'C:\Users\matth\Desktop\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test5\testing-data\original-data'
 
 dirs = ['0', '1', '2', '3', '4',
         'a-lower', 'b-lower', 'c-lower',
@@ -31,17 +31,17 @@ def create_dirs():
     for fname in dirs:
         p = os.path.join(test_dir, fname)
         if not os.path.isdir(p):
-            os.mkdir(os.path.join(test_dir, fname))
+            os.mkdir(p)
     
     for fname in dirs:
         p = os.path.join(train_dir, fname)
         if not os.path.isdir(p):
-            os.mkdir(os.path.join(train_dir, fname))
+            os.mkdir(p)
         
     for fname in dirs:
         p = os.path.join(validate_dir, fname)
         if not os.path.isdir(p):
-            os.mkdir(os.path.join(validate_dir, fname))
+            os.mkdir(p)
             
     
 
@@ -56,9 +56,9 @@ def place_images():
         new_dir = os.path.join(original_data_dir, dname)
         dest_dir = ''
         all_pictures = os.listdir(new_dir)
-        train_limit = int(len(all_pictures) * .50)
-        validate_limit = int(len(all_pictures) * .25) + train_limit
-        test_limit = int(len(all_pictures) * .25) + validate_limit
+        train_limit = int(len(all_pictures) * .75)
+        validate_limit = int(len(all_pictures) * .15) + train_limit
+        test_limit = int(len(all_pictures) * .10) + validate_limit
         
         for picture in range(0, train_limit):
             dest_dir = os.path.join(train_dir, dname)          

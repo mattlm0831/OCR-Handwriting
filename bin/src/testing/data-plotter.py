@@ -19,7 +19,7 @@ new_hist = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\con
 medset_2 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test2'
 medset_3 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test3'
 medset_4 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test4'
-med_set5 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test5'
+med_set5 = r'C:\Users\matth\Desktop\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test5'
 
 
 
@@ -54,7 +54,7 @@ def plot(file = None, name = None):
      plt.plot(epochs, val_acc, 'b', label='Validation Accuracy', color = '#991A00', linewidth = 2)
      plt.title('Training and Validation Accuracy')
      plt.legend()
-     plt.axis([0, len(acc)+1,.60,1.0])
+     plt.axis([0, len(acc)+1,.2,1])
      if name:
          plt.savefig(os.path.join(file, 'acc_' + name + '.png'))
      else:
@@ -68,7 +68,7 @@ def plot(file = None, name = None):
      plt.plot(epochs, val_loss, 'b', label = 'Validation Loss', color = '#991A00', linewidth = 2)
      plt.title('Training and Validation Loss')
      plt.legend()
-     plt.axis([0,len(acc)+1,.0,.80])
+     plt.axis([0,len(acc)+1, 0.0 , 3])
      if name:
          plt.savefig(os.path.join(file, 'loss_' + name + '.png'))
      else:
