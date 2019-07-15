@@ -33,6 +33,10 @@ model_3 = None
 letterarray = [i for i in ('a','b','c','d')]
 medset_labels = ['0', '1', '2', '3', '4', 'A-upper', 'B-upper', 'C-upper', 'D-upper', 'E-upper', 'F-upper', 'G-upper', 'a-lower', 'b-lower', 'c-lower', 'd-lower', 'e-lower', 'f-lower', 'g-lower']
 
+medset_labels2 = ['0', '1', 'A_upper', 'B_upper', 'C_upper', 'D_upper', 'E_upper', 'F_upper', 'G_upper', 'a_lower', 'b_lower', 'c_lower', 'd_lower', 'e_lower', 'f_lower', 'g_lower', 'h_lower', 'l_lower', 'm_lower', 'n_lower', 'o_lower', 'p_lower']]
+print(medset_labels2)
+
+
 def predict_test1(img_path):
     
     image = cv2.imread(img_path)

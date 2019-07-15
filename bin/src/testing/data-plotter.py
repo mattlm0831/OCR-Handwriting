@@ -21,7 +21,7 @@ medset_3 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\con
 medset_4 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test4'
 med_set5 = r'C:\Users\matth\Desktop\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test5'
 
-
+medset_20v1= r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset2.0-ocr-test1'
 
 mdl_path1 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test1\convnet-smallset-ocr-test1-model.h5'
 mdl_path2 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test2\convnet-smallset-ocr-test2-model.h5'

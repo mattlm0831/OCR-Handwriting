@@ -357,4 +357,17 @@ neural network that has a peak of 94.69\% validation accuracy. Note, the network
 \item \includegraphics{loss_history5v4}
 \item The results are preliminarily good, and I believe that we will be able to work to improve this version.
 \end{enumerate}
+
+\subsection{July 15th, 2019}
+\noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
+\begin{enumerate}[label = (\roman*)]
+\item After two weeks of rather stagnant improvements in test results, I decided to test a hypothesis.
+\item It is my opinion that the training set for images in the first medium set may have been insufficient when given such large amounts of classes to choose from.
+\item I posit that if I were to change the classes to those with more example data, the results of the training would improve dramatically. I have now started a medium set 2.0 test.
+\item This test set will be 22 letters that have 8000 examples, compared to 5000 like the previous set of letters. This will give us a concrete decision of where to take our data set from here, more imaging seems necessary.
+\item Today I have completed 4 tests that aim to get closer to this answer. From what I can ascertain, this network seems to be no better than the previous one. There is some improvement in overfitting, but the overall accuracy rate is not getting any higher. This obfuscates the original point of these tests, but I have 2 more that I think will give a better conclusion on this topic. 
+\item\includegraphics{{C:/Users/matth/Documents/GitHub/OCR-Handwriting/bin/src/testing/convnet-medset2.0-ocr-test1/acc-history4.png }}
+\end{enumerate}
+
+
 \end{document}
