@@ -29,7 +29,7 @@ model.add(layers.MaxPooling2D((2, 2)))
 model.add(layers.Dropout(rate = .25))
 model.add(layers.Flatten())
 model.add(layers.Dense(512, activation='relu'))
-model.add(layers.Dense(22, activation='softmax'))
+model.add(layers.Dense(22 , activation='softmax'))
 
 
 model.compile(loss='categorical_crossentropy',

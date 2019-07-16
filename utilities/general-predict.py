@@ -26,6 +26,10 @@ prediction_path_4 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\te
 prediction_path_5 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test3\predictions'
 prediction_path_6 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test4\predictions'
 
+
+mdl_path_test= r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test3\convnet-smallset-test3-model-TEST.h5'
+pred_path_test = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test3\predictions'
+
 model_1 = None
 model_2 = None
 model_3 = None
@@ -33,7 +37,7 @@ model_3 = None
 letterarray = [i for i in ('a','b','c','d')]
 medset_labels = ['0', '1', '2', '3', '4', 'A-upper', 'B-upper', 'C-upper', 'D-upper', 'E-upper', 'F-upper', 'G-upper', 'a-lower', 'b-lower', 'c-lower', 'd-lower', 'e-lower', 'f-lower', 'g-lower']
 
-medset_labels2 = ['0', '1', 'A_upper', 'B_upper', 'C_upper', 'D_upper', 'E_upper', 'F_upper', 'G_upper', 'a_lower', 'b_lower', 'c_lower', 'd_lower', 'e_lower', 'f_lower', 'g_lower', 'h_lower', 'l_lower', 'm_lower', 'n_lower', 'o_lower', 'p_lower']]
+medset_labels2 = ['0', '1', 'A_upper', 'B_upper', 'C_upper', 'D_upper', 'E_upper', 'F_upper', 'G_upper', 'a_lower', 'b_lower', 'c_lower', 'd_lower', 'e_lower', 'f_lower', 'g_lower', 'h_lower', 'l_lower', 'm_lower', 'n_lower', 'o_lower', 'p_lower']
 print(medset_labels2)
 
 
@@ -226,6 +230,38 @@ def predict_test6(img_path):
     cv2.imwrite(os.path.join(prediction_path_6, name), output)   
     print("Prediction created:" + name) 
     
+def predict_test7(img_path):
+    
+    print('called')
+    image = cv2.imread(img_path)
+    orig= image.copy()
+    
+    image = cv2.resize(image, (150,150))
+    image = image.astype("float") / 255.0
+    image = img_to_array(image)
+    image = np.expand_dims(image, axis=0)
+    
+
+    model = models.load_model(mdl_path_test)
+
+        
+    probs = model.predict(image)[0]
+    m = max(probs)
+    a = probs.argmax(axis = 0)
+    
+    label = letterarray[a] 
+        
+    text = "{}: {:.3f}%".format(label, m*100)
+    output = imutils.resize(orig, width = 400)
+    cv2.putText(output, text, (10,25), cv2.FONT_HERSHEY_SIMPLEX,
+                0.7, (0, 255, 0), 2)
+    cv2.imshow("Output", output)
+    cv2.waitKey(0) 
+    l = len(os.listdir(pred_path_test))
+    name = 'This_is_' + str(label) + str(l+1) + '.png'
+    cv2.imwrite(os.path.join(pred_path_test, name), output)   
+    print("Prediction created:" + name) 
+    
 if __name__ == "__main__": 
     args = sys.argv
     if len(args) >= 2:
@@ -259,7 +295,8 @@ def ranges(max_range, num, path, amount = 30):
             predict_test5(os.path.join(path, entry))
         elif num == 6:
             predict_test6(os.path.join(path, entry))
-    
+        elif num == 7:
+            predict_test7(os.path.join(path, entry))
     
     
     

@@ -7,8 +7,8 @@ Created on Wed Jun 19 14:09:23 2019
 
 import os, shutil
 
-ROOT_DIR = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset2.0-ocr-test1\testing-data'
-original_data_dir = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset2.0-ocr-test1\testing-data\original-data'
+ROOT_DIR = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test3\testing-data'
+original_data_dir = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test3\testing-data\original-sets'
 dirs = os.listdir(original_data_dir)
 
 
@@ -21,11 +21,13 @@ def create_dirs():
     test_dir = os.path.join(ROOT_DIR, 'test')
     validate_dir = os.path.join(ROOT_DIR, 'validation')
     
-    for fname in dirs:
-        p = os.path.join(test_dir, fname)
-        if not os.path.isdir(p):
-            os.mkdir(p)
-    
+    if not os.path.isdir(train_dir):
+        os.mkdir(train_dir)
+    if not os.path.isdir(test_dir):    
+        os.mkdir(test_dir)
+    if not os.path.isdir(validate_dir):
+        os.mkdir(validate_dir)
+        
     for fname in dirs:
         p = os.path.join(train_dir, fname)
         if not os.path.isdir(p):
@@ -44,13 +46,15 @@ def place_images():
     train_dir= os.path.join(ROOT_DIR, 'train')
     test_dir = os.path.join(ROOT_DIR, 'test')
     validate_dir = os.path.join(ROOT_DIR, 'validation')
-    
+
+    total = 0
     for dname in dirs:
         new_dir = os.path.join(original_data_dir, dname)
         dest_dir = ''
         all_pictures = os.listdir(new_dir)
-        train_limit = int(len(all_pictures) * .75)
-        validate_limit = int(len(all_pictures) * .15) + train_limit
+        total+= len(all_pictures)
+        train_limit = int(len(all_pictures) * .70)
+        validate_limit = int(len(all_pictures) * .20) + train_limit
         test_limit = int(len(all_pictures) * .10) + validate_limit
         
         for picture in range(0, train_limit):
@@ -68,13 +72,12 @@ def place_images():
             shutil.copyfile(src, dest)
             
         for picture in range(validate_limit, test_limit):
-            dest_dir = os.path.join(test_dir, dname)
             fname = all_pictures[picture]
             src = os.path.join(new_dir, fname)
-            dest = os.path.join(dest_dir, fname)
+            dest = os.path.join(test_dir, fname)
             shutil.copyfile(src, dest)
             
-            
+    print("Moving ", total, ' images to their respective test locations.')
             
             
             

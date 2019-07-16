@@ -374,5 +374,26 @@ neural network that has a peak of 94.69\% validation accuracy. Note, the network
 \item The results from the final test will be present in tomorrow's update. The test will over run into tomorrow and will have to be paused.
 \end{enumerate}
 
+\subsection{July 16th, 2019}
+\noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
+\begin{enumerate}[label = (\roman*)]
+\item The truncated test from yesterday led to the following results:
+\item\includegraphics{{new_med_imgs/acc_history}}
+\item\includegraphics{{new_med_imgs/loss_history}}
+\item The results are good, but still seem inconclusive. It does not appear clear that the lag in progress from previous iterations was due to a lack of data, although I think adding data would certainly improve scores.
+\item In order to gauge the effect of increasing size relative to a single sample rather than a change in sample classes (as was done in the previous test), we chose to expand a data set through manual augmentation and comparing it to the same, unaugmented set.
+\item We went back to the original smallset test, which has 4 classes with 1,539 images. Through a program called image transform  that I wrote, I augmented them and got 3,053 images total from the base set.
+\item Examples of augmentation:
+\item \includegraphics{{augmented/augmented_6}} \includegraphics{{augmented/augmented_61}} \includegraphics{{augmented/augmented_73}} \includegraphics{{augmented/augmented_87}}
+\item The results were as follows:
+\item Baseline:
+\item \includegraphics{{new_med_imgs/acc_historybaseline}}
+\item \includegraphics{{new_med_imgs/loss_historybaseline}}
+\item Test:
+\item \includegraphics{{new_med_imgs/acc_historytest}}
+\item \includegraphics{{new_med_imgs/loss_historytest}}
+\item The results are not significant, although the decrease in loss is notable. As can be seen in Figure XIV there appears to be a small uptick in accuracy at the end of the training cycle. We intend to test what happens with slightly increased training to 150 epochs.
+
+\end{enumerate}
 
 \end{document}
