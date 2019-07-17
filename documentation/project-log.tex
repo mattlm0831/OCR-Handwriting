@@ -398,4 +398,20 @@ neural network that has a peak of 94.69\% validation accuracy. Note, the network
 \item\includegraphics{{new_med_imgs/loss_historytest150epochs}}
 \end{enumerate}
 
+
+\subsection{July 17th, 2019}
+\noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
+\begin{enumerate}[label = (\roman*)]
+\item Yesterday I created a script that does large scale testing in order to compile data into csv files for visualization.
+\item The script takes a path to the test files, a path to the model, and a dictionary of labels. The script then tests, and subsequently saves the results to a results.csv file.
+\item This will be useful to document our results with.
+\item There have been several important developments at the end of yesterday on the project. For one I rewrote the data manipulation script to be random and the results seem to be an increase of ~5\% over the previous version.
+\item I have also modified the optimization function we use by adding an epsilon parameter of .9.
+\item I have decided as well to increase dropout where possible to continue to limit our model's tendency to over fit. The results are great:
+\item \includegraphics[height = 200mm, scale=.5]{{new_med_imgs/model}}
+\item \includegraphics{{new_med_imgs/acc_historytest2}}
+\item \includegraphics{new_med_imgs/loss_historytest2}
+\item The small discrepancy between training and validation acc/loss is due to using dropout on the model, this difference would converge over time.
+\end{enumerate}
+
 \end{document}

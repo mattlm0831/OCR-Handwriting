@@ -5,7 +5,7 @@ Created on Tue Jul 16 09:55:22 2019
 @author: matth
 """
 root_dir = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test3\testing-data\original-sets'
-
+test_for_big_set = r'C:\Users\matth\Desktop\ascii_lower'
 
 from scipy import ndarray
 import random
@@ -21,10 +21,10 @@ num_files_desired = 250
 
 def random_rotation(image_array: ndarray):
     rand_degree = random.uniform(-25, 25)
-    return sk.transform.rotate(image_array, rand_degree)
+    return transform.rotate(image_array, rand_degree)
 
 def random_noise(image_array: ndarray):
-    return sk.util.random_noise(image_array)
+    return util.random_noise(image_array)
 
 def horizontal_flip(image_array: ndarray):
     return image_array[:, ::-1]
@@ -36,27 +36,27 @@ avail_transforms = {
         'horizontal_flip' : horizontal_flip
         
         }
-
-for folder in sub_folders:
-    images = [os.path.join(folder, pic) for pic in os.listdir(folder)]
-    
-    generated = 0
-    
-    while generated <= num_files_desired:
-        transformed = None   
-        image = random.choice(images)
+def transform_many(folder):
+    sub_folders = [os.path.join(folder, f) for f in os.listdir(folder)]
+    for folder in sub_folders:
+        images = [os.path.join(folder, pic) for pic in os.listdir(folder)]
         
-        imgarray = sk.io.imread(image)
-        num_transforms = 0
-        t = random.randint(1, len(avail_transforms))
-        while num_transforms <= t:
-            key = random.choice(list(avail_transforms))
-            imgarray = avail_transforms[key](imgarray)
-            num_transforms+=1
+        generated = 0
         
-        generated+=1
-        name =  'augmented_' + str(generated) + '.png'
-        newfile= os.path.join(folder, name)
-        sk.io.imsave(newfile, imgarray)
-    print('Generated ', generated, ' images for ', folder)
-    
+        while generated <= num_files_desired:
+            image = random.choice(images)
+            
+            imgarray = sk.io.imread(image)
+            num_transforms = 0
+            t = random.randint(1, len(avail_transforms))
+            while num_transforms <= t:
+                key = random.choice(list(avail_transforms))
+                imgarray = avail_transforms[key](imgarray)
+                num_transforms+=1
+            
+            generated+=1
+            name =  'augmented_' + str(generated) + '.png'
+            newfile= os.path.join(folder, name)
+            sk.io.imsave(newfile, imgarray)
+        print('Generated ', generated, ' images for ', folder)
+        

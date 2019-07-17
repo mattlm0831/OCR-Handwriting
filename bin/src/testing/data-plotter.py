@@ -85,4 +85,4 @@ def model_to_img(model_path):
      return str("Saved to " + file_path)
 
 def mdl_dot(model):
-     SVG(model_to_dot(model).create(prog='dot', format = 'svg'))
+     return SVG(model_to_dot(model).create(prog='dot', format = 'svg'))

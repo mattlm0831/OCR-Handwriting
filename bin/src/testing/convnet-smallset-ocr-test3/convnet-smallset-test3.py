@@ -22,16 +22,21 @@ def train():
                             input_shape=(150,150,3)))
     model.add(layers.MaxPooling2D((2, 2)))
     
+    model.add(layers.Conv2D(32, (5,5), activation='relu'))
+    model.add(layers.MaxPooling2D((2, 2)))
+    
     model.add(layers.Conv2D(64, (3, 3), activation = 'relu'))
     model.add(layers.MaxPooling2D((2, 2)))
-    model.add(layers.Dropout(rate = .25))
+    model.add(layers.Dropout(rate = .3))
     
     model.add(layers.Conv2D(128, (3, 3), activation = 'relu'))
     model.add(layers.MaxPooling2D((2, 2)))
+    model.add(layers.Dropout(rate=.3))
     
-    model.add(layers.Conv2D(128, (3, 3), activation = 'relu'))
+    
+    model.add(layers.Conv2D(256, (3, 3), activation = 'relu'))
     model.add(layers.MaxPooling2D((2, 2)))
-    model.add(layers.Dropout(rate = .25))
+    model.add(layers.Dropout(rate = .3))
     
     model.add(layers.Flatten())
     
@@ -61,8 +66,7 @@ def train():
             target_size=(150,150),
             batch_size=64,
             class_mode= 'categorical')
-    print(train_generator.class_indices)
-    return
+    
     validation_generator =  test_datagen.flow_from_directory(
             VALIDATION_DIR,
             target_size=(150,150),
@@ -70,10 +74,10 @@ def train():
             class_mode= 'categorical')
     
     history = model.fit_generator(train_generator,
-                                  steps_per_epoch= 50,
-                                  epochs=150,
+                                  steps_per_epoch= 30,
+                                  epochs=400,
                                   validation_data= validation_generator,
                                   validation_steps=50)
     
-    model.save("convnet-smallset-test3-model-TEST.h5")
-    np.save("historytest150epochs.npy", history)
+    model.save("convnet-smallset-test3-model-TEST3.h5")
+    np.save("historytest3.npy", history)

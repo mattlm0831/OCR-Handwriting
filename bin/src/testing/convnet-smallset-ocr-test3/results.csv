@@ -2,10 +2,10 @@ File,Prediction,,Results,,,
 a\a.01.a_007.png,a,,1,,,
 a\a.01.a_020.png,a,,1,,,
 a\a.01.a_023.png,a,,1,,,Stats:
-a\a.01.a_024.png,c,,0,,Correct,182
-a\a.01.a_027.png,a,,1,,Ratio,0.892156863
-a\a.01.a_048.png,a,,1,,,
-a\a.01.a_053.png,a,,1,,,
+a\a.01.a_024.png,c,,0,,Correct,265
+a\a.01.a_027.png,a,,1,,Ratio,0.86038961
+a\a.01.a_048.png,a,,1,,Incorrect,43
+a\a.01.a_053.png,a,,1,,Total,308
 a\a.01.a_058.png,a,,1,,,
 a\a.01.a_059.png,a,,1,,,
 a\a.01.a_071.png,a,,1,,,
