@@ -31,7 +31,7 @@ mdl_path6 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\co
 mdl_path6 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test4\convnet-medset-ocr-test4-model.h5'
 
 
-def plot(file = None, name = None):
+def plot(file = None, name = None, min_ = 0, max_ = 1):
     
      history = None
      if not name and not file:
@@ -54,7 +54,7 @@ def plot(file = None, name = None):
      plt.plot(epochs, val_acc, 'b', label='Validation Accuracy', color = '#991A00', linewidth = 2)
      plt.title('Training and Validation Accuracy')
      plt.legend()
-     plt.axis([0, len(acc)+1,.8,1])
+     plt.axis([0, len(acc)+1,min_,max_])
      if name:
          plt.savefig(os.path.join(file, 'acc_' + name.split('.')[0] + '.png'))
      else:
@@ -68,7 +68,7 @@ def plot(file = None, name = None):
      plt.plot(epochs, val_loss, 'b', label = 'Validation Loss', color = '#991A00', linewidth = 2)
      plt.title('Training and Validation Loss')
      plt.legend()
-     plt.axis([0,len(acc)+1, 0.0 , .5])
+     plt.axis([0,len(acc)+1, min_ , max_])
      if name:
          plt.savefig(os.path.join(file, 'loss_' + name.split('.')[0] + '.png'))
      else:

@@ -13,7 +13,7 @@ import os
 import cv2
 ################## TESTING #########################
 
-path = r'C:/Users/matth/Documents/GitHub/OCR-Handwriting/bin/src/testing/convnet-smallset-ocr-test3/convnet-smallset-test3-model-TEST1.h5'
+path = r'C:/Users/matth/Documents/GitHub/OCR-Handwriting/bin/src/testing/convnet-smallset-ocr-test3/convnet-smallset-test3-model-TEST3.h5'
 test_dir = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test3\testing-data\test'
 l = {'a': 0, 'b': 1, 'c': 2, 'd': 3}
 
@@ -26,6 +26,7 @@ def manual_test(model_path, testing_dir, labels):
     all_files = list()
     predictions = list()
     model = models.load_model(model_path)
+    mdl_name = model_path.split('\\')[-1]
     
     labels= dict((v,k) for k,v in labels.items())
     
@@ -55,11 +56,18 @@ def manual_test(model_path, testing_dir, labels):
     p = ''
     for i in range(0, len(new_path)-1):
         p+= new_path[i] + '//'
-    if 'results.csv' in os.listdir(p):
-        results.to_csv(os.path.join(p, 'results_' + str(len(os.listdir(p)) + 1) + '.csv'), index= False)
-    else:
-        results.to_csv(os.path.join(p, "results.csv"), index = False)
     
+    name = ''
+    if 'results.csv' in os.listdir(p):
+        name = mdl_name +'_'+ 'results_' + str(len(os.listdir(p)) + 1) + '.csv'
+        results.to_csv(os.path.join(p, name), index= False)
+        
+    else:
+        name =  mdl_name + "results.csv"
+        results.to_csv(os.path.join(p, name), index = False)
+    
+    print("[" + name + '] created')
+    return
 
 def generator_test(model_path, testing_dir, labels):
     test_datagen = ImageDataGenerator(1./255)
