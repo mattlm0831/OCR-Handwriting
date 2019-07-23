@@ -26,9 +26,10 @@ prediction_path_4 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\te
 prediction_path_5 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test3\predictions'
 prediction_path_6 = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test4\predictions'
 
+mdl_path7= r'C:/Users/matth/Desktop/OCR-Handwriting/bin/src/testing/convnet-smallset-ocr-test3/convnet-smallset-test3-model-TEST3.h5'
 
 mdl_path_test= r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test3\convnet-smallset-test3-model-TEST.h5'
-pred_path_test = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test3\predictions'
+pred_path_test = r'C:\Users\matth\Desktop\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test3\predictions'
 
 model_1 = None
 model_2 = None
@@ -242,7 +243,7 @@ def predict_test7(img_path):
     image = np.expand_dims(image, axis=0)
     
 
-    model = models.load_model(mdl_path_test)
+    model = models.load_model(mdl_path7)
 
         
     probs = model.predict(image)[0]
@@ -251,7 +252,7 @@ def predict_test7(img_path):
     
     label = letterarray[a] 
         
-    text = "{}: {:.3f}%".format(label, m*100)
+    text = "{}: {:.3f}%".format('This is a ' + label, m*100)
     output = imutils.resize(orig, width = 400)
     cv2.putText(output, text, (10,25), cv2.FONT_HERSHEY_SIMPLEX,
                 0.7, (0, 255, 0), 2)

@@ -4,7 +4,7 @@ Created on Tue Jul 16 09:55:22 2019
 
 @author: matth
 """
-root_dir = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test3\testing-data\original-sets'
+root_dir = r'C:\Users\matth\Desktop\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test6\testing-data\original-data'
 test_for_big_set = r'C:\Users\matth\Desktop\ascii_lower'
 
 from scipy import ndarray

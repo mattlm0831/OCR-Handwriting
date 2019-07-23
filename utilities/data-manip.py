@@ -7,8 +7,8 @@ Created on Wed Jun 19 14:09:23 2019
 
 import os, shutil
 import random
-ROOT_DIR = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test3\testing-data'
-original_data_dir = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-smallset-ocr-test3\testing-data\original-sets'
+ROOT_DIR = r'C:\Users\matth\Desktop\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test6\testing-data'
+original_data_dir = r'C:\Users\matth\Desktop\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test6\testing-data\original-data'
 dirs = os.listdir(original_data_dir)
 
 
@@ -70,7 +70,7 @@ def place_images():
             dest = os.path.join(dest_dir, fname)
             shutil.copyfile(src, dest)
             
-        print(len(all_pictures))    
+           
         for i in range(train_limit, validate_limit):
             dest_dir = os.path.join(validate_dir, dname)
             fname = random.choice(all_pictures)
@@ -78,7 +78,7 @@ def place_images():
             src = os.path.join(new_dir, fname)
             dest = os.path.join(dest_dir, fname)
             shutil.copyfile(src, dest)
-        print(len(all_pictures))
+        
         
         for i in range(0, len(all_pictures)):
             dest_dir = os.path.join(test_dir, dname)
@@ -88,7 +88,7 @@ def place_images():
             dest = os.path.join(dest_dir, fname)
             shutil.copyfile(src, dest)
             
-        print(len(all_pictures))
+        
         
     print("Moving ", total, ' images to their respective test locations.')
             
