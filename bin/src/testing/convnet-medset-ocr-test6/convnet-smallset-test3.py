@@ -15,7 +15,7 @@ from keras.preprocessing.image import ImageDataGenerator
 import numpy as np
 
 
-def train():
+def compile_model():
     model = models.Sequential()
     
     model.add(layers.Conv2D(32, (3,3), activation='relu',
@@ -24,6 +24,7 @@ def train():
     
     model.add(layers.Conv2D(32, (5,5), activation='relu'))
     model.add(layers.MaxPooling2D((2, 2)))
+    model.add(layers.Dropout(rate=.3))
     
     model.add(layers.Conv2D(64, (3, 3), activation = 'relu'))
     model.add(layers.MaxPooling2D((2, 2)))
@@ -36,9 +37,11 @@ def train():
     
     model.add(layers.Conv2D(256, (3, 3), activation = 'relu'))
     model.add(layers.MaxPooling2D((2, 2)))
-    model.add(layers.Dropout(rate = .3))
+    
     
     model.add(layers.Flatten())
+    
+    model.add(layers.Dense(1024, activation = 'relu'))
     
     model.add(layers.Dense(512, activation='relu'))
     
@@ -51,6 +54,10 @@ def train():
                   optimizer=optimizers.RMSprop(lr=.001, rho=.9, epsilon=1e-08, decay=0.0),
                   metrics = ['acc'])
     
+    return model
+ 
+def train(model):    
+
     train_datagen = ImageDataGenerator(rescale=1./255,
                                        rotation_range=40,
                                        width_shift_range=0.2,
@@ -79,5 +86,5 @@ def train():
                                   validation_data= validation_generator,
                                   validation_steps=50)
     
-    model.save("convnet-medset-test6.h5")
-    np.save("historytest.npy", history)
+    model.save("convnet-medset-test7.h5")
+    np.save("historytest7.npy", history)
