@@ -4,19 +4,16 @@ Created on Wed Jun 19 14:09:23 2019
 
 @author: Matthew Mulhall
 """
-
+from img_transform import transform_many
 import os, shutil
 import random
-ROOT_DIR = r'C:\Users\matth\Desktop\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test6\testing-data'
-original_data_dir = r'C:\Users\matth\Desktop\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test6\testing-data\original-data'
-dirs = os.listdir(original_data_dir)
-
 
 #This file was used to manipulate the images into the proper directories without having to do it manually for the larger dataset test.
 
 
-def create_dirs():
+def create_dirs(ROOT_DIR, original_data_dir):
     
+    dirs = os.listdir(original_data_dir)
     train_dir= os.path.join(ROOT_DIR, 'train')
     test_dir = os.path.join(ROOT_DIR, 'test')
     validate_dir = os.path.join(ROOT_DIR, 'validation')
@@ -46,8 +43,9 @@ def create_dirs():
     
 
         
-def place_images():
+def place_images(ROOT_DIR, original_data_dir):
     
+    dirs = os.listdir(original_data_dir)
     train_dir= os.path.join(ROOT_DIR, 'train')
     test_dir = os.path.join(ROOT_DIR, 'test')
     validate_dir = os.path.join(ROOT_DIR, 'validation')

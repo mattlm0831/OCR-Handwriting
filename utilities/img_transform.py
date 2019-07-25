@@ -4,8 +4,6 @@ Created on Tue Jul 16 09:55:22 2019
 
 @author: matth
 """
-root_dir = r'C:\Users\matth\Desktop\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test6\testing-data\original-data'
-test_for_big_set = r'C:\Users\matth\Desktop\ascii_lower'
 
 from scipy import ndarray
 import random
@@ -13,9 +11,9 @@ import skimage as sk
 from skimage import transform
 from skimage import util
 import os
-
+root_dir = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test7\testing-data'
 sub_folders = [os.path.join(root_dir,folder) for folder in os.listdir(root_dir)]
-num_files_desired = 250
+
 
 
 
@@ -32,11 +30,9 @@ def horizontal_flip(image_array: ndarray):
 
 avail_transforms = {
         'rotate' : random_rotation,
-        'noise' : random_noise,
-        'horizontal_flip' : horizontal_flip
-        
+        'noise' : random_noise  
         }
-def transform_many(folder):
+def transform_many(folder, num_files_desired = 300):
     sub_folders = [os.path.join(folder, f) for f in os.listdir(folder)]
     for folder in sub_folders:
         images = [os.path.join(folder, pic) for pic in os.listdir(folder)]

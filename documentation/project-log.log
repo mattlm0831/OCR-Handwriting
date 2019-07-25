@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.25)  17 JUL 2019 10:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.25)  25 JUL 2019 16:09
 entering extended mode
 **./project-log.tex
 (project-log.tex
@@ -518,20 +518,20 @@ LaTeX Info: Redefining \nameref on input line 66.
 
 {C:/Users/matth/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] [4]
  [5] [6] [7] [8] [9]
-<convnet-test-1-val-acc.png, id=223, 382.42876pt x 252.945pt>
+<convnet-test-1-val-acc.png, id=227, 382.42876pt x 252.945pt>
 File: convnet-test-1-val-acc.png Graphic file (type png)
 <use convnet-test-1-val-acc.png>
 Package pdftex.def Info: convnet-test-1-val-acc.png  used on input line 285.
 (pdftex.def)             Requested size: 382.42781pt x 252.94438pt.
 
 [10 <./convnet-test-1-val-acc.png>]
-<convnet-test-2-val-acc.png, id=243, 376.40625pt x 264.99pt>
+<convnet-test-2-val-acc.png, id=247, 376.40625pt x 264.99pt>
 File: convnet-test-2-val-acc.png Graphic file (type png)
 <use convnet-test-2-val-acc.png>
 Package pdftex.def Info: convnet-test-2-val-acc.png  used on input line 295.
 (pdftex.def)             Requested size: 376.40532pt x 264.98935pt.
  [11 <./convnet-test-2-val-acc.png>]
-<This_is_d1.png, id=254, 401.5pt x 483.8075pt>
+<This_is_d1.png, id=258, 401.5pt x 483.8075pt>
 File: This_is_d1.png Graphic file (type png)
 <use This_is_d1.png>
 Package pdftex.def Info: This_is_d1.png  used on input line 298.
@@ -542,12 +542,12 @@ Overfull \hbox (12.62003pt too wide) in paragraph at lines 298--299
  []
 
 [12 <./This_is_d1.png (PNG copy)>]
-<train-vs-val-acc-small2.png, id=261, 433.62pt x 289.08pt>
+<train-vs-val-acc-small2.png, id=265, 433.62pt x 289.08pt>
 File: train-vs-val-acc-small2.png Graphic file (type png)
 <use train-vs-val-acc-small2.png>
 Package pdftex.def Info: train-vs-val-acc-small2.png  used on input line 307.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
-<train-vs-val-loss-small2.png, id=262, 433.62pt x 289.08pt>
+<train-vs-val-loss-small2.png, id=266, 433.62pt x 289.08pt>
 File: train-vs-val-loss-small2.png Graphic file (type png)
 <use train-vs-val-loss-small2.png>
 Package pdftex.def Info: train-vs-val-loss-small2.png  used on input line 307.
@@ -563,12 +563,12 @@ Overfull \hbox (44.73996pt too wide) in paragraph at lines 307--308
  []
 
 [13 <./train-vs-val-acc-small2.png>]
-<train-vs-val-acc-med-1.png, id=273, 433.62pt x 289.08pt>
+<train-vs-val-acc-med-1.png, id=277, 433.62pt x 289.08pt>
 File: train-vs-val-acc-med-1.png Graphic file (type png)
 <use train-vs-val-acc-med-1.png>
 Package pdftex.def Info: train-vs-val-acc-med-1.png  used on input line 310.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
-<train-vs-val-loss-med-1.png, id=274, 433.62pt x 289.08pt>
+<train-vs-val-loss-med-1.png, id=278, 433.62pt x 289.08pt>
 File: train-vs-val-loss-med-1.png Graphic file (type png)
 <use train-vs-val-loss-med-1.png>
 Package pdftex.def Info: train-vs-val-loss-med-1.png  used on input line 310.
@@ -585,13 +585,13 @@ Overfull \hbox (44.73996pt too wide) in paragraph at lines 310--311
 
 [14 <./train-vs-val-loss-small2.png>] [15 <./train-vs-val-acc-med-1.png> <./tra
 in-vs-val-loss-med-1.png>]
-<model-medset2.png, id=290, 550.055pt x 1281.78876pt>
+<model-medset2.png, id=294, 550.055pt x 1281.78876pt>
 File: model-medset2.png Graphic file (type png)
 <use model-medset2.png>
 Package pdftex.def Info: model-medset2.png  used on input line 321.
 (pdftex.def)             Requested size: 275.02682pt x 640.8928pt.
  [16] [17 <./model-medset2.png>]
-<train-vs-val-acc-medset2.png, id=306, 433.62pt x 289.08pt>
+<train-vs-val-acc-medset2.png, id=310, 433.62pt x 289.08pt>
 File: train-vs-val-acc-medset2.png Graphic file (type png)
 <use train-vs-val-acc-medset2.png>
 Package pdftex.def Info: train-vs-val-acc-medset2.png  used on input line 323.
@@ -601,7 +601,7 @@ Overfull \hbox (44.73996pt too wide) in paragraph at lines 323--324
 [][] 
  []
 
-<train-vs-val-loss-medset2.png, id=307, 433.62pt x 289.08pt>
+<train-vs-val-loss-medset2.png, id=311, 433.62pt x 289.08pt>
 File: train-vs-val-loss-medset2.png Graphic file (type png)
 <use train-vs-val-loss-medset2.png>
 Package pdftex.def Info: train-vs-val-loss-medset2.png  used on input line 324.
@@ -630,7 +630,7 @@ Overfull \hbox (3.8729pt too wide) in paragraph at lines 326--327
  []
 
 [19 <./train-vs-val-loss-medset2.png>]
-<train-vs-val-acc-medset3.png, id=325, 433.62pt x 289.08pt>
+<train-vs-val-acc-medset3.png, id=329, 433.62pt x 289.08pt>
 File: train-vs-val-acc-medset3.png Graphic file (type png)
 <use train-vs-val-acc-medset3.png>
 Package pdftex.def Info: train-vs-val-acc-medset3.png  used on input line 329.
@@ -640,7 +640,7 @@ Overfull \hbox (44.73996pt too wide) in paragraph at lines 329--330
 [][] 
  []
 
-<train-vs-val-loss-medset3.png, id=326, 433.62pt x 289.08pt>
+<train-vs-val-loss-medset3.png, id=330, 433.62pt x 289.08pt>
 File: train-vs-val-loss-medset3.png Graphic file (type png)
 <use train-vs-val-loss-medset3.png>
 Package pdftex.def Info: train-vs-val-loss-medset3.png  used on input line 330.
@@ -652,19 +652,19 @@ Overfull \hbox (44.73996pt too wide) in paragraph at lines 330--331
  []
 
 [20 <./train-vs-val-acc-medset3.png>]
-<model-medset4.png, id=335, 542.025pt x 1504.62125pt>
+<model-medset4.png, id=339, 542.025pt x 1504.62125pt>
 File: model-medset4.png Graphic file (type png)
 <use model-medset4.png>
 Package pdftex.def Info: model-medset4.png  used on input line 337.
 (pdftex.def)             Requested size: 271.01183pt x 752.30879pt.
  [21 <./train-vs-val-loss-medset3.png>]
 [22 <./model-medset4.png>]
-<train-vs-val-acc-medset4.png, id=349, 433.62pt x 289.08pt>
+<train-vs-val-acc-medset4.png, id=353, 433.62pt x 289.08pt>
 File: train-vs-val-acc-medset4.png Graphic file (type png)
 <use train-vs-val-acc-medset4.png>
 Package pdftex.def Info: train-vs-val-acc-medset4.png  used on input line 340.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
-<train-vs-val-loss-medset4.png, id=350, 433.62pt x 289.08pt>
+<train-vs-val-loss-medset4.png, id=354, 433.62pt x 289.08pt>
 File: train-vs-val-loss-medset4.png Graphic file (type png)
 <use train-vs-val-loss-medset4.png>
 Package pdftex.def Info: train-vs-val-loss-medset4.png  used on input line 341.
@@ -681,7 +681,7 @@ Overfull \hbox (44.73996pt too wide) in paragraph at lines 339--342
  []
 
 [23 <./train-vs-val-acc-medset4.png>] [24 <./train-vs-val-loss-medset4.png>]
-<acc_history5v4.png, id=367, 433.62pt x 289.08pt>
+<acc_history5v4.png, id=371, 433.62pt x 289.08pt>
 File: acc_history5v4.png Graphic file (type png)
 <use acc_history5v4.png>
 Package pdftex.def Info: acc_history5v4.png  used on input line 356.
@@ -692,7 +692,7 @@ Overfull \hbox (44.73996pt too wide) in paragraph at lines 356--357
  []
 
 [25]
-<loss_history5v4.png, id=378, 433.62pt x 289.08pt>
+<loss_history5v4.png, id=382, 433.62pt x 289.08pt>
 File: loss_history5v4.png Graphic file (type png)
 <use loss_history5v4.png>
 Package pdftex.def Info: loss_history5v4.png  used on input line 357.
@@ -703,7 +703,7 @@ Overfull \hbox (44.73996pt too wide) in paragraph at lines 357--358
  []
 
 [26 <./acc_history5v4.png> <./loss_history5v4.png>]
-<acc_history5-20.png, id=387, 433.62pt x 289.08pt>
+<acc_history5-20.png, id=391, 433.62pt x 289.08pt>
 File: acc_history5-20.png Graphic file (type png)
 <use acc_history5-20.png>
 Package pdftex.def Info: acc_history5-20.png  used on input line 370.
@@ -714,7 +714,7 @@ Overfull \hbox (44.73996pt too wide) in paragraph at lines 370--371
  []
 
 [27]
-<loss_history5-20.png, id=399, 433.62pt x 289.08pt>
+<loss_history5-20.png, id=403, 433.62pt x 289.08pt>
 File: loss_history5-20.png Graphic file (type png)
 <use loss_history5-20.png>
 Package pdftex.def Info: loss_history5-20.png  used on input line 371.
@@ -725,7 +725,7 @@ Overfull \hbox (44.73996pt too wide) in paragraph at lines 371--372
  []
 
 [28 <./acc_history5-20.png> <./loss_history5-20.png>]
-<new_med_imgs/acc_history.png, id=408, 433.62pt x 289.08pt>
+<new_med_imgs/acc_history.png, id=412, 433.62pt x 289.08pt>
 File: new_med_imgs/acc_history.png Graphic file (type png)
 <use new_med_imgs/acc_history.png>
 Package pdftex.def Info: new_med_imgs/acc_history.png  used on input line 381.
@@ -735,7 +735,7 @@ Overfull \hbox (44.73996pt too wide) in paragraph at lines 381--382
 [][] 
  []
 
-<new_med_imgs/loss_history.png, id=409, 433.62pt x 289.08pt>
+<new_med_imgs/loss_history.png, id=413, 433.62pt x 289.08pt>
 File: new_med_imgs/loss_history.png Graphic file (type png)
 <use new_med_imgs/loss_history.png>
 Package pdftex.def Info: new_med_imgs/loss_history.png  used on input line 382.
@@ -747,28 +747,28 @@ Overfull \hbox (44.73996pt too wide) in paragraph at lines 382--383
  []
 
 [29 <./new_med_imgs/acc_history.png>]
-<augmented/augmented_6.png, id=420, 34.1275pt x 52.195pt>
+<augmented/augmented_6.png, id=424, 34.1275pt x 52.195pt>
 File: augmented/augmented_6.png Graphic file (type png)
 <use augmented/augmented_6.png>
 Package pdftex.def Info: augmented/augmented_6.png  used on input line 387.
 (pdftex.def)             Requested size: 34.1274pt x 52.19487pt.
-<augmented/augmented_61.png, id=421, 31.11626pt x 67.25125pt>
+<augmented/augmented_61.png, id=425, 31.11626pt x 67.25125pt>
 File: augmented/augmented_61.png Graphic file (type png)
 <use augmented/augmented_61.png>
 Package pdftex.def Info: augmented/augmented_61.png  used on input line 387.
 (pdftex.def)             Requested size: 31.11617pt x 67.25107pt.
-<augmented/augmented_73.png, id=422, 27.10126pt x 47.17625pt>
+<augmented/augmented_73.png, id=426, 27.10126pt x 47.17625pt>
 File: augmented/augmented_73.png Graphic file (type png)
 <use augmented/augmented_73.png>
 Package pdftex.def Info: augmented/augmented_73.png  used on input line 387.
 (pdftex.def)             Requested size: 27.10118pt x 47.17612pt.
-<augmented/augmented_87.png, id=423, 39.14626pt x 72.27pt>
+<augmented/augmented_87.png, id=427, 39.14626pt x 72.27pt>
 File: augmented/augmented_87.png Graphic file (type png)
 <use augmented/augmented_87.png>
 Package pdftex.def Info: augmented/augmented_87.png  used on input line 387.
 (pdftex.def)             Requested size: 39.14615pt x 72.2698pt.
  [30 <./new_med_imgs/loss_history.png>]
-<new_med_imgs/acc_historybaseline.png, id=434, 433.62pt x 289.08pt>
+<new_med_imgs/acc_historybaseline.png, id=438, 433.62pt x 289.08pt>
 File: new_med_imgs/acc_historybaseline.png Graphic file (type png)
 <use new_med_imgs/acc_historybaseline.png>
 Package pdftex.def Info: new_med_imgs/acc_historybaseline.png  used on input li
@@ -779,7 +779,7 @@ Overfull \hbox (44.73996pt too wide) in paragraph at lines 390--391
 [][] 
  []
 
-<new_med_imgs/loss_historybaseline.png, id=435, 433.62pt x 289.08pt>
+<new_med_imgs/loss_historybaseline.png, id=439, 433.62pt x 289.08pt>
 File: new_med_imgs/loss_historybaseline.png Graphic file (type png)
 <use new_med_imgs/loss_historybaseline.png>
 Package pdftex.def Info: new_med_imgs/loss_historybaseline.png  used on input l
@@ -793,7 +793,7 @@ Overfull \hbox (44.73996pt too wide) in paragraph at lines 391--392
 [31 <./augmented/augmented_6.png> <./augmented/augmented_61.png> <./augmented/a
 ugmented_73.png> <./augmented/augmented_87.png> <./new_med_imgs/acc_historybase
 line.png>]
-<new_med_imgs/acc_historytest.png, id=450, 433.62pt x 289.08pt>
+<new_med_imgs/acc_historytest.png, id=454, 433.62pt x 289.08pt>
 File: new_med_imgs/acc_historytest.png Graphic file (type png)
 <use new_med_imgs/acc_historytest.png>
 Package pdftex.def Info: new_med_imgs/acc_historytest.png  used on input line 3
@@ -805,7 +805,7 @@ Overfull \hbox (44.73996pt too wide) in paragraph at lines 393--394
  []
 
 [32 <./new_med_imgs/loss_historybaseline.png>]
-<new_med_imgs/loss_historytest.png, id=458, 433.62pt x 289.08pt>
+<new_med_imgs/loss_historytest.png, id=462, 433.62pt x 289.08pt>
 File: new_med_imgs/loss_historytest.png Graphic file (type png)
 <use new_med_imgs/loss_historytest.png>
 Package pdftex.def Info: new_med_imgs/loss_historytest.png  used on input line 
@@ -817,7 +817,7 @@ Overfull \hbox (44.73996pt too wide) in paragraph at lines 394--395
  []
 
 [33 <./new_med_imgs/acc_historytest.png> <./new_med_imgs/loss_historytest.png>]
-<new_med_imgs/acc_historytest150epochs.png, id=467, 433.62pt x 289.08pt>
+<new_med_imgs/acc_historytest150epochs.png, id=471, 433.62pt x 289.08pt>
 File: new_med_imgs/acc_historytest150epochs.png Graphic file (type png)
 <use new_med_imgs/acc_historytest150epochs.png>
 Package pdftex.def Info: new_med_imgs/acc_historytest150epochs.png  used on inp
@@ -828,7 +828,7 @@ Overfull \hbox (44.73996pt too wide) in paragraph at lines 397--398
 [][] 
  []
 
-<new_med_imgs/loss_historytest150epochs.png, id=468, 433.62pt x 289.08pt>
+<new_med_imgs/loss_historytest150epochs.png, id=472, 433.62pt x 289.08pt>
 File: new_med_imgs/loss_historytest150epochs.png Graphic file (type png)
 <use new_med_imgs/loss_historytest150epochs.png>
 Package pdftex.def Info: new_med_imgs/loss_historytest150epochs.png  used on in
@@ -841,13 +841,13 @@ Overfull \hbox (44.73996pt too wide) in paragraph at lines 398--399
 
 [34 <./new_med_imgs/acc_historytest150epochs.png>] [35 <./new_med_imgs/loss_his
 torytest150epochs.png>]
-<new_med_imgs/model.png, id=487, 542.025pt x 1504.62125pt>
+<new_med_imgs/model.png, id=491, 542.025pt x 1504.62125pt>
 File: new_med_imgs/model.png Graphic file (type png)
 <use new_med_imgs/model.png>
 Package pdftex.def Info: new_med_imgs/model.png  used on input line 411.
 (pdftex.def)             Requested size: 271.01183pt x 752.30879pt.
  [36]
-<new_med_imgs/acc_historytest2.png, id=494, 433.62pt x 289.08pt>
+<new_med_imgs/acc_historytest2.png, id=498, 433.62pt x 289.08pt>
 File: new_med_imgs/acc_historytest2.png Graphic file (type png)
 <use new_med_imgs/acc_historytest2.png>
 Package pdftex.def Info: new_med_imgs/acc_historytest2.png  used on input line 
@@ -859,7 +859,7 @@ Overfull \hbox (44.73996pt too wide) in paragraph at lines 412--413
  []
 
 [37 <./new_med_imgs/model.png>]
-<new_med_imgs/loss_historytest2.png, id=502, 433.62pt x 289.08pt>
+<new_med_imgs/loss_historytest2.png, id=506, 433.62pt x 289.08pt>
 File: new_med_imgs/loss_historytest2.png Graphic file (type png)
 <use new_med_imgs/loss_historytest2.png>
 Package pdftex.def Info: new_med_imgs/loss_historytest2.png  used on input line
@@ -872,33 +872,73 @@ Overfull \hbox (44.73996pt too wide) in paragraph at lines 413--414
 
 [38 <./new_med_imgs/acc_historytest2.png> <./new_med_imgs/loss_historytest2.png
 >]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 423.
- [39]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 423.
- (project-log.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 423.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 423.
+<charts/overall.png, id=515, 694.595pt x 429.605pt>
+File: charts/overall.png Graphic file (type png)
+<use charts/overall.png>
+Package pdftex.def Info: charts/overall.png  used on input line 427.
+(pdftex.def)             Requested size: 486.21318pt x 300.72144pt.
+
+Overfull \hbox (97.3342pt too wide) in paragraph at lines 427--428
+[][] 
+ []
+
+[39]
+<charts/rate.png, id=525, 602.25pt x 372.39125pt>
+File: charts/rate.png Graphic file (type png)
+<use charts/rate.png>
+Package pdftex.def Info: charts/rate.png  used on input line 428.
+(pdftex.def)             Requested size: 421.57211pt x 260.67209pt.
+
+Overfull \hbox (32.69313pt too wide) in paragraph at lines 428--429
+[][] 
+ []
+
+[40 <./charts/overall.png> <./charts/rate.png>]
+<charts/total-vs-correct.png, id=534, 361.35pt x 217.5628pt>
+File: charts/total-vs-correct.png Graphic file (type png)
+<use charts/total-vs-correct.png>
+Package pdftex.def Info: charts/total-vs-correct.png  used on input line 434.
+(pdftex.def)             Requested size: 361.34912pt x 217.56227pt.
+<charts/correct-vs-samples.png, id=535, 438.8897pt x 277.035pt>
+File: charts/correct-vs-samples.png Graphic file (type png)
+<use charts/correct-vs-samples.png>
+Package pdftex.def Info: charts/correct-vs-samples.png  used on input line 436.
+
+(pdftex.def)             Requested size: 438.88863pt x 277.03432pt.
+
+Overfull \hbox (50.00964pt too wide) in paragraph at lines 436--437
+[][] 
+ []
+
+[41 <./charts/total-vs-correct.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 440.
+ [42 <./charts/correct-vs-samples.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 440.
+
+(project-log.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 440.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 440.
 Package rerunfilecheck Info: File `project-log.out' has not changed.
-(rerunfilecheck)             Checksum: CC93A59BDE4E34B0F1EF38D606B303D9;1997.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 423.
+(rerunfilecheck)             Checksum: 221BBF80D6FD96573DFCA318D1715C17;2064.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 440.
  ) 
 Here is how much of TeX's memory you used:
- 8423 strings out of 492895
- 132359 string characters out of 3123735
+ 8461 strings out of 492895
+ 133008 string characters out of 3123735
  228436 words of memory out of 3000000
- 12000 multiletter control sequences out of 15000+200000
+ 12017 multiletter control sequences out of 15000+200000
  6539 words of font info for 24 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,11n,43p,955b,461s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,11n,43p,1030b,461s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmbx12.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmr10.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/matth/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/matth/AppData/Loca
 l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on project-log.pdf (39 pages, 786456 bytes).
+Output written on project-log.pdf (42 pages, 825791 bytes).
 PDF statistics:
- 589 PDF objects out of 1000 (max. 8388607)
- 229 named destinations out of 1000 (max. 500000)
- 411 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 627 PDF objects out of 1000 (max. 8388607)
+ 245 named destinations out of 1000 (max. 500000)
+ 439 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -24,6 +24,7 @@ def train():
     
     model.add(layers.Conv2D(32, (5,5), activation='relu'))
     model.add(layers.MaxPooling2D((2, 2)))
+    model.add(layers.Dropout(rate = .3))
     
     model.add(layers.Conv2D(64, (3, 3), activation = 'relu'))
     model.add(layers.MaxPooling2D((2, 2)))
@@ -36,7 +37,6 @@ def train():
     
     model.add(layers.Conv2D(256, (3, 3), activation = 'relu'))
     model.add(layers.MaxPooling2D((2, 2)))
-    model.add(layers.Dropout(rate = .3))
     
     model.add(layers.Flatten())
     
@@ -79,5 +79,5 @@ def train():
                                   validation_data= validation_generator,
                                   validation_steps=50)
     
-    model.save("convnet-smallset-test3-model-TEST3.h5")
-    np.save("historytest3.npy", history)
+    model.save("convnet-smallset-test3-model-TEST4.h5")
+    np.save("historytest4.npy", history)

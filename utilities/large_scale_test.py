@@ -13,8 +13,8 @@ import os
 import cv2
 ################## TESTING #########################
 
-path = r'C:/Users/matth/Desktop/OCR-Handwriting/bin/src/testing/convnet-medset-ocr-test6/convnet-medset-test7.h5'
-test_dir = r'C:/Users/matth/Desktop/OCR-Handwriting/bin/src/testing/convnet-medset-ocr-test6/testing-data/test'
+path = r'C:/Users/matth/Documents/GitHub/OCR-Handwriting/bin/src/testing/convnet-medset-ocr-test7/convnet-medset-test7.h5'
+test_dir = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test7\testing-data\test'
 l = {'a': 0, 'b': 1, 'c': 2, 'd': 3}
 lmed = {'0': 0, '1': 1, '2': 2, '3': 3,'4': 4,'A-upper': 5,'B-upper': 6,'C-upper': 7,'D-upper': 8,'E-upper': 9,'F-upper': 10,'G-upper': 11,'a-lower': 12,'b-lower': 13,'c-lower': 14,'d-lower': 15,'e-lower': 16,'f-lower': 17,'g-lower': 18}
 
