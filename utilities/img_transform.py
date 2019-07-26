@@ -30,7 +30,8 @@ def horizontal_flip(image_array: ndarray):
 
 avail_transforms = {
         'rotate' : random_rotation,
-        'noise' : random_noise  
+        'noise' : random_noise,
+        'horizontal-flip' : horizontal_flip
         }
 def transform_many(folder, num_files_desired = 300):
     sub_folders = [os.path.join(folder, f) for f in os.listdir(folder)]

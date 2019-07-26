@@ -7,8 +7,20 @@ Created on Wed Jun 19 14:09:23 2019
 from img_transform import transform_many
 import os, shutil
 import random
-
 #This file was used to manipulate the images into the proper directories without having to do it manually for the larger dataset test.
+
+
+
+def compile_data(original_data, root_dir=None, num_files = 300):
+    
+    if not root_dir:
+        root_dir = os.path.dirname(original_data)
+        
+    create_dirs(root_dir, original_data)
+    transform_many(original_data, num_files)
+    place_images(root_dir, original_data)
+        
+
 
 
 def create_dirs(ROOT_DIR, original_data_dir):
