@@ -11,7 +11,7 @@ import skimage as sk
 from skimage import transform
 from skimage import util
 import os
-root_dir = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test7\testing-data'
+root_dir= r'C:\Users\matth\Desktop\OCR-Handwriting\bin\src\testing'
 sub_folders = [os.path.join(root_dir,folder) for folder in os.listdir(root_dir)]
 
 

@@ -13,11 +13,34 @@ import os
 import cv2
 ################## TESTING #########################
 
-path = r'C:/Users/matth/Documents/GitHub/OCR-Handwriting/bin/src/testing/convnet-medset-ocr-test7/convnet-medset-test7.h5'
-test_dir = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test7\testing-data\test'
+
 l = {'a': 0, 'b': 1, 'c': 2, 'd': 3}
 lmed = {'0': 0, '1': 1, '2': 2, '3': 3,'4': 4,'A-upper': 5,'B-upper': 6,'C-upper': 7,'D-upper': 8,'E-upper': 9,'F-upper': 10,'G-upper': 11,'a-lower': 12,'b-lower': 13,'c-lower': 14,'d-lower': 15,'e-lower': 16,'f-lower': 17,'g-lower': 18}
-label_list = [l, lmed]
+lsupermed = {'0': 0,
+ '1': 1,
+ 'A_upper': 2,
+ 'B_upper': 3,
+ 'C_upper': 4,
+ 'D_upper': 5,
+ 'E_upper': 6,
+ 'F_upper': 7,
+ 'G_upper': 8,
+ 'a_lower': 9,
+ 'b_lower': 10,
+ 'c_lower': 11,
+ 'd_lower': 12,
+ 'e_lower': 13,
+ 'f_lower': 14,
+ 'g_lower': 15,
+ 'h_lower': 16,
+ 'l_lower': 17,
+ 'm_lower': 18,
+ 'n_lower': 19,
+ 'o_lower': 20,
+ 'p_lower': 21}
+label_list = [l, lmed, lsupermed]
+
+
 
 def choose_test(file):
     
@@ -83,7 +106,7 @@ def choose_data(file):
     return os.path.join(os.path.join(file, fname), 'test')
         
 def test():
-    root = r'C:/Users/matth/Documents/GitHub/OCR-Handwriting/bin/src/testing'
+    root = r'C:/Users/matth/Desktop/OCR-Handwriting/bin/src/testing'
     test_folder = choose_test(root)
     model = choose_model(test_folder)
     data = choose_data(test_folder)
