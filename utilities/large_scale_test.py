@@ -140,7 +140,7 @@ def generator_test(model_path, testing_dir, labels):
     test_datagen = ImageDataGenerator(1./255)
     test_generator = test_datagen.flow_from_directory(testing_dir, target_size=(150,150), class_mode='categorical', shuffle = False)
     test_generator.batch_size= test_generator.n
-    model = models.load_model(model_path)
+    model = m.load_model(model_path)
     pred = model.predict_generator(test_generator, steps = 1, verbose=1)
     
     predicted_class_indices = np.argmax(pred, axis=1)
