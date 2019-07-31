@@ -112,7 +112,14 @@ def test():
     data = choose_data(test_folder)
     labels = choose_label()
     manual_test(model, data, labels, test_folder)
-    
+
+
+def check_right(row):
+    if row['file'] == row['prediction']:
+        return 1
+    else:
+        return 0
+  
 def manual_test(model, testing_dir, labels, root):
     
     model = m.load_model(model)
@@ -144,20 +151,30 @@ def manual_test(model, testing_dir, labels, root):
         
     
     
-
-    results = pd.DataFrame({'File' : all_files, 'Prediction' : predictions})
+    all_files = [i.split('/')[0] for i in all_files]
+    results = pd.DataFrame({'file' : all_files, 'prediction' : predictions})
+    results['correct/incorrect'] = results.apply(lambda row : check_right(row), axis =1)
+    #grouping = 
+    grouping = results.groupby(['file', 'correct/incorrect'], as_index=False).count()
+    results = pd.concat([results, grouping], axis = 1)
     os.chdir(root)
     p = root
     if 'results.csv' in os.listdir(p):
         name = 'results_' + str(len(os.listdir(p)) + 1) + '.csv'
+        #name2= 'grouping_results_' + str(len(os.listdir(p)) + 1) + '.csv'
         results.to_csv(os.path.join(p, name), index= False)
-        
+        #grouping.to_csv(os.path.join(p, name2), index= False)
     else:
         name =  "results.csv"
+        #name2= 'grouping_results' + '.csv'
         results.to_csv(os.path.join(p, name), index = False)
+        #grouping.to_csv(os.path.join(p, name2), index= False)
     
     print("[" + name + '] created')
     return
+
+
+
 
 def generator_test(model_path, testing_dir, labels):
     test_datagen = ImageDataGenerator(1./255)
@@ -172,7 +189,7 @@ def generator_test(model_path, testing_dir, labels):
     predictions = [labels[k] for k in predicted_class_indices]
     
     filenames = test_generator.filenames
-    results = pd.DataFrame({"File" : filenames, "Prediction" : predictions})
+    results = pd.DataFrame({"File" : filenames, "Prediction" : predictions, 'Correct/Incorrect' : True if predictions == filenames else False})
     new_path = path.split('/')
     p = ''
     for i in range(0, len(new_path)-1):
@@ -182,5 +199,3 @@ def generator_test(model_path, testing_dir, labels):
     else:
         results.to_csv(os.path.join(p, "results.csv"), index = False)
         
-if __name__ == "__main__":
-    test()   

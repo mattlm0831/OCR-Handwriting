@@ -71,11 +71,16 @@
 \item 4.0 vs 4.1: 4.1 increased the augmentation from 250 photos per class to 500 photos per class, which is reflected in the increase in overall numbers for 4.1. This was not a positive improvement.
 \item 4.1 vs 4.2: 4.2 retained the same model as 4.1 and 4.0. 4.2 Used a augmentation size of 300 as well as removed the horizontal flip option from the augmentation. I did this as I thought that flipping a d or b horizontally could lead to classification issues. It does not seem that this had a positive effect. 
 \item I also compiled some useful data regarding to the medium (19 class) set.
+\item Amendment 7/31/2019. 22 class classification yielded a test result of 86.4\%. This model used a data set that was heavily expanded by 800 over the original samples, and had a dense layer with 2,048 nodes. I also removed one of the convolution layers, which seems to have yielded good results. This is a 6.4\% increase over the previous best, and with a larger classification task. Compared to the next best (15.2 times better than guessing) this test yielded results that were 19 times better than guessing on a 22 way classification problem.
+
 \item The following is a graph showing the total number of samples vs correct guesses that was achieved during a test on the 7th iteration of the medium set model.
 \item \includegraphics{charts/total-vs-correct}
 \item The following graphic used the previous graphs data to find the relationship between sample sizes and correctness.
 \item \includegraphics {charts/correct-vs-samples}
 \item Given the conclusions of the tests as well as plotting the information into graphs, the model needs more data. The previous chart's trendline clearly suggests that there is a positive relationship between samples taken and the model's success. Although this seems obvious, it was important to isolate each character, as well as rule out the interaction of certain characters. I.e. it was important to figure out if 'b' and 'd' interacted, or if they had high success despite their similarity.
+\item New best model data:
+\item \includegraphics{charts/chart-class-rates}
+
 \end{enumerate}
 
 \end{document}

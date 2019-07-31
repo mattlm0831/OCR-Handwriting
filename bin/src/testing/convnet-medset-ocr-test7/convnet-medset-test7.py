@@ -35,13 +35,13 @@ def compile_model():
     model.add(layers.MaxPooling2D((1, 1)))
     model.add(layers.Dropout(rate = .3))
     
-    model.add(layers.Conv2D(128, (3, 3), activation = 'relu'))
+    model.add(layers.Conv2D(128, (1, 1), activation = 'relu'))
     model.add(layers.MaxPooling2D((2, 2)))
-#    model.add(layers.Dropout(rate=.3))
+    model.add(layers.Dropout(rate=.3))
     
     
-#    model.add(layers.Conv2D(256, (3, 3), activation = 'relu'))
-#    model.add(layers.MaxPooling2D((2, 2)))
+    model.add(layers.Conv2D(256, (3, 3), activation = 'relu'))
+    model.add(layers.MaxPooling2D((2, 2)))
     
     
     model.add(layers.Flatten())
@@ -91,5 +91,5 @@ def train(model):
                                   validation_data= validation_generator,
                                   validation_steps=50)
     
-    model.save("convnet-medset-test12.h5")
-    np.save("historytest12.npy", history)
+    model.save("convnet-medset-test13-best.h5")
+    np.save("historytest13-best.npy", history)

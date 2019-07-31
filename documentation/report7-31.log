@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.25)  31 JUL 2019 15:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.25)  31 JUL 2019 13:36
 entering extended mode
-**./report-7-25.tex
-(report-7-25.tex
+**./report7-31.tex
+(report7-31.tex
 LaTeX2e <2018-12-01>
 ("C:\Users\matth\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
@@ -396,8 +396,8 @@ Package: authblk 2001/02/27 1.3 (PWD)
 \c@Maxaffil=\count120
 \c@authors=\count121
 \c@affil=\count122
-) (report-7-25.aux)
-\openout1 = `report-7-25.aux'.
+) (report7-31.aux)
+\openout1 = `report7-31.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
 LaTeX Font Info:    ... okay on input line 63.
@@ -510,81 +510,36 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 63.
 LaTeX Info: Redefining \pageref on input line 63.
 LaTeX Info: Redefining \nameref on input line 63.
- (report-7-25.out) (report-7-25.out)
+ (report7-31.out) (report7-31.out)
 \@outlinefile=\write3
-\openout3 = `report-7-25.out'.
+\openout3 = `report7-31.out'.
 
-<charts/overall.png, id=3, 694.595pt x 429.605pt>
-File: charts/overall.png Graphic file (type png)
-<use charts/overall.png>
-Package pdftex.def Info: charts/overall.png  used on input line 68.
-(pdftex.def)             Requested size: 486.21318pt x 300.72144pt.
-
-Overfull \hbox (97.3342pt too wide) in paragraph at lines 68--69
-[][] 
- []
-
-[1
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 65.
+ [1
 
 {C:/Users/matth/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<charts/rate.png, id=13, 602.25pt x 372.39125pt>
-File: charts/rate.png Graphic file (type png)
-<use charts/rate.png>
-Package pdftex.def Info: charts/rate.png  used on input line 69.
-(pdftex.def)             Requested size: 421.57211pt x 260.67209pt.
-
-Overfull \hbox (32.69313pt too wide) in paragraph at lines 69--70
-[][] 
- []
-
-[2 <./charts/overall.png> <./charts/rate.png>]
-<charts/total-vs-correct.png, id=22, 361.35pt x 217.5628pt>
-File: charts/total-vs-correct.png Graphic file (type png)
-<use charts/total-vs-correct.png>
-Package pdftex.def Info: charts/total-vs-correct.png  used on input line 77.
-(pdftex.def)             Requested size: 361.34912pt x 217.56227pt.
- [3 <./charts/total-vs-correct.png>]
-<charts/correct-vs-samples.png, id=35, 438.8897pt x 277.035pt>
-File: charts/correct-vs-samples.png Graphic file (type png)
-<use charts/correct-vs-samples.png>
-Package pdftex.def Info: charts/correct-vs-samples.png  used on input line 79.
-(pdftex.def)             Requested size: 438.88863pt x 277.03432pt.
-
-Overfull \hbox (50.00964pt too wide) in paragraph at lines 79--80
-[][] 
- []
-
-<charts/chart-class-rates.png, id=36, 307.1475pt x 185.19188pt>
-File: charts/chart-class-rates.png Graphic file (type png)
-<use charts/chart-class-rates.png>
-Package pdftex.def Info: charts/chart-class-rates.png  used on input line 82.
-(pdftex.def)             Requested size: 307.14674pt x 185.1914pt.
-[4 <./charts/correct-vs-samples.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 86.
- [5 <./charts/chart-class-rates.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 86.
-
-(report-7-25.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 86.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 86.
-Package rerunfilecheck Info: File `report-7-25.out' has not changed.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 65.
+ (report7-31.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 65.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 65.
+Package rerunfilecheck Info: File `report7-31.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 86.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 65.
  ) 
 Here is how much of TeX's memory you used:
- 7969 strings out of 492895
- 124828 string characters out of 3123735
- 226443 words of memory out of 3000000
- 11787 multiletter control sequences out of 15000+200000
+ 7920 strings out of 492895
+ 123964 string characters out of 3123735
+ 223339 words of memory out of 3000000
+ 11764 multiletter control sequences out of 15000+200000
  4535 words of font info for 17 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,11n,43p,1030b,455s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,5n,43p,234b,322s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmr12.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmr17.pfb>
-Output written on report-7-25.pdf (5 pages, 78406 bytes).
+Output written on report7-31.pdf (1 page, 25130 bytes).
 PDF statistics:
- 65 PDF objects out of 1000 (max. 8388607)
- 21 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 19 PDF objects out of 1000 (max. 8388607)
+ 2 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
