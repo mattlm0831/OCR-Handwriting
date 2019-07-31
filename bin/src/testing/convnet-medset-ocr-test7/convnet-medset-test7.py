@@ -4,9 +4,9 @@ Created on Wed Jun 19 14:42:27 2019
 
 @author: Matthew Mulhall
 """
-TRAIN_DIR = r'C:\Users\matth\Desktop\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test7\testing-data2\train'
-VALIDATION_DIR = r'C:\Users\matth\Desktop\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test7\testing-data2\validation'
-TEST_DIR = r'C:\Users\matth\Desktop\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test7\testing-data2\test'
+TRAIN_DIR = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test7\testing-data2\train'
+VALIDATION_DIR = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test7\testing-data2\validation'
+TEST_DIR = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test7\testing-data2\test'
 
 from keras import layers
 from keras import models 
@@ -22,7 +22,7 @@ def compile_model():
                             input_shape=(150,150,3)))
     model.add(layers.MaxPooling2D((2, 2)))
     
-    model.add(layers.Conv2D(32, (3,3), activation='relu'))
+    model.add(layers.Conv2D(32, (1,1), activation='relu'))
     model.add(layers.MaxPooling2D((2, 2)))
     model.add(layers.Dropout(rate=.3))
     
@@ -31,24 +31,24 @@ def compile_model():
     model.add(layers.MaxPooling2D((2, 2)))
     model.add(layers.Dropout(rate=.3))
     
-    model.add(layers.Conv2D(64, (1, 1), activation = 'relu'))
+    model.add(layers.Conv2D(64, (3, 3), activation = 'relu'))
     model.add(layers.MaxPooling2D((1, 1)))
     model.add(layers.Dropout(rate = .3))
     
     model.add(layers.Conv2D(128, (3, 3), activation = 'relu'))
     model.add(layers.MaxPooling2D((2, 2)))
-    model.add(layers.Dropout(rate=.3))
+#    model.add(layers.Dropout(rate=.3))
     
     
-    model.add(layers.Conv2D(256, (3, 3), activation = 'relu'))
-    model.add(layers.MaxPooling2D((2, 2)))
+#    model.add(layers.Conv2D(256, (3, 3), activation = 'relu'))
+#    model.add(layers.MaxPooling2D((2, 2)))
     
     
     model.add(layers.Flatten())
     
-    model.add(layers.Dense(1024, activation = 'relu'))
+    model.add(layers.Dense(2048, activation = 'relu'))
     
-    model.add(layers.Dense(512, activation='relu'))
+    #model.add(layers.Dense(512, activation='relu'))
     
     model.add(layers.Dense(22, activation='softmax'))
     
@@ -91,5 +91,5 @@ def train(model):
                                   validation_data= validation_generator,
                                   validation_steps=50)
     
-    model.save("convnet-medset-test9.h5")
-    np.save("historytest9.npy", history)
+    model.save("convnet-medset-test12.h5")
+    np.save("historytest12.npy", history)

@@ -106,7 +106,7 @@ def choose_data(file):
     return os.path.join(os.path.join(file, fname), 'test')
         
 def test():
-    root = r'C:/Users/matth/Desktop/OCR-Handwriting/bin/src/testing'
+    root = r'C:/Users/matth/Documents/Github/OCR-Handwriting/bin/src/testing'
     test_folder = choose_test(root)
     model = choose_model(test_folder)
     data = choose_data(test_folder)
