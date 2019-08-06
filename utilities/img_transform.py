@@ -6,16 +6,12 @@ Created on Tue Jul 16 09:55:22 2019
 """
 
 from scipy import ndarray
+from scipy import ndimage
 import random
 import skimage as sk
 from skimage import transform
 from skimage import util
 import os
-root_dir= r'C:\Users\matth\Desktop\OCR-Handwriting\bin\src\testing'
-sub_folders = [os.path.join(root_dir,folder) for folder in os.listdir(root_dir)]
-
-
-
 
 def random_rotation(image_array: ndarray):
     rand_degree = random.uniform(-25, 25)
@@ -27,11 +23,25 @@ def random_noise(image_array: ndarray):
 def horizontal_flip(image_array: ndarray):
     return image_array[:, ::-1]
 
+def scale_out(image_array: ndarray):
+    factor = random.uniform(1, 2)
+    return transform.rescale(image_array, scale=factor, mode='constant')
+
+def scale_in(image_array: ndarray):
+    factor = random.uniform(0,1)
+    return transform.rescale(image_array, scale=factor, mode='constant')
+
+def blur(image_array: ndarray):
+    return ndimage.uniform_filter(image_array, size=(11,11,1))
+
 
 avail_transforms = {
         'rotate' : random_rotation,
         'noise' : random_noise,
-        'horizontal-flip' : horizontal_flip
+        'horizontal-flip' : horizontal_flip,
+        'scale-in' : scale_in,
+        'scale-out' : scale_out,
+        'blur' : blur
         }
 def transform_many(folder, num_files_desired = 300):
     sub_folders = [os.path.join(folder, f) for f in os.listdir(folder)]
