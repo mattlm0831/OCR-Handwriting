@@ -7,30 +7,33 @@ Created on Tue May 14 11:14:41 2019
 """
 import os 
 
-def rename():
+def rename(path = ''):
 
 #Set old dir to the path up until your char folder . Something like: "C:\Users\yourname\Documents\OCR-Handwriting\bin\data\char"
 
     #Created more generality in the script, rather than needing an IDE to change path it is now interactive at the cmd.
     
     directory = ""
-    try:
-        pathFile = open("path.txt", "r+")
-    
-    except:
-        pathFile = open("path.txt", "w+")
-    
-    line = []
-    for line in pathFile.readlines(): print(line)
-    
-    
-    if not line:
-            directory = input("Please enter the path of your OCR-Handwriting\char\ file: ")
-            pathFile.write(directory)
+    if path:
+        directory = path    
     else:
-        directory = line
+        try:
+            pathFile = open("path.txt", "r+")
+        
+        except:
+            pathFile = open("path.txt", "w+")
+        
+        line = []
+        for line in pathFile.readlines(): print(line)
     
-    pathFile.close()
+    
+        if not line:
+                directory = input("Please enter the path of your data file")
+                pathFile.write(directory)
+        else:
+            directory = line
+    
+        pathFile.close()
 
 
     os.chdir(directory)
