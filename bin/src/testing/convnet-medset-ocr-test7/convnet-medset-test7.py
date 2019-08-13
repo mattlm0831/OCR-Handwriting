@@ -31,24 +31,22 @@ def compile_model():
     model.add(layers.MaxPooling2D((2, 2)))
     model.add(layers.Dropout(rate=.3))
     
-    model.add(layers.Conv2D(64, (3, 3), activation = 'relu'))
+    model.add(layers.Conv2D(128, (3, 3), activation = 'relu'))
     model.add(layers.MaxPooling2D((1, 1)))
     model.add(layers.Dropout(rate = .3))
     
-    model.add(layers.Conv2D(128, (1, 1), activation = 'relu'))
+    model.add(layers.Conv2D(256, (1, 1), activation = 'relu'))
     model.add(layers.MaxPooling2D((2, 2)))
     model.add(layers.Dropout(rate=.3))
     
     
-    model.add(layers.Conv2D(256, (3, 3), activation = 'relu'))
+    model.add(layers.Conv2D(512, (3, 3), activation = 'relu'))
     model.add(layers.MaxPooling2D((2, 2)))
     
     
     model.add(layers.Flatten())
     
     model.add(layers.Dense(2048, activation = 'relu'))
-    
-    #model.add(layers.Dense(512, activation='relu'))
     
     model.add(layers.Dense(22, activation='softmax'))
     

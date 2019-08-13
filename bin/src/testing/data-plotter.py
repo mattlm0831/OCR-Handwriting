@@ -10,8 +10,7 @@ import matplotlib.pyplot as plt
 import os
 from keras import models
 from keras.utils import plot_model
-from IPython.display import SVG
-from keras.utils.vis_utils import model_to_dot
+
 
 
 HIST_FILE = r'C:\Users\matth\Documents\GitHub\OCR-Handwriting\bin\src\testing\convnet-medset-ocr-test1'
@@ -83,6 +82,3 @@ def model_to_img(model_path):
      file_path = os.path.join(file_path, 'model.png')
      plot_model(model, to_file = file_path, show_shapes = True, show_layer_names=True)
      return str("Saved to " + file_path)
-
-def mdl_dot(model):
-     return SVG(model_to_dot(model).create(prog='dot', format = 'svg'))
