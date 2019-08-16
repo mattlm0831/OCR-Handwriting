@@ -67,6 +67,7 @@
 This is a report outlining what has been achieved so far for this OCR-Handwriting Transcription project for the summer of 2019 from May-August. This serves as a basis for understanding of what the project has achieved as well as a basis for writing an papers or grant proposals.
 
 \section{Technical Specifications}
+\noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
 We currently have 7 documents that have been allocated for our project. The first 4 will be used to create the data set of images. On top of simple screenshots, we will also employ GPUs to transform the images to get the most mileage out of each photo. The last 3 will be later allocated into development and strict testing sets. These will be allocated as the training set is developed.
 
 \subsection{Description of file system}
@@ -116,27 +117,18 @@ We currently have 7 documents that have been allocated for our project. The firs
 \end{enumerate}
 
 \section{Models}
+\noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
 Over the course of the summer the project has accumulated 41 models from the time of writing this report. Almost all models built upon the previous successful model and furthered that sucess. Even with our minimal amounts of data we have been able to achieve 96\% + success rate for 4 way identification, and 86\% + accuracy on 22 class identification.
 
 
 \section{Data}
+\noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
 This project has amassed 16,000+ images of characters throughout the course of several months This averages out to 260 images per class. Historically speaking this is a very low amount of representative data for convolutional neural networks. Despite this, we have been able to get good results out of our models. Even so, I posit that to make enterprise level sofftware we will require data increases by a factor of 3-5x. We completed tests earlier in order to see what type of correlation we found between a class' sucess rate when plotted against its data size.
 The following is a graph showing the total number of samples vs correct guesses that was achieved during a test on the 7th iteration of the medium set model.
-
-\begin{enumerate}[label = (\roman*)]
-\item\includegraphics{charts/total-vs-correct}
-\item The following graphic used the previous graphs data to find the relationship between sample sizes and correctness.
-\item\includegraphics {charts/correct-vs-samples}
-\end{enumerate}
-Given the conclusions of the tests as well as plotting the information into graphs, the model needs more data. The previous chart's trendline clearly suggests that there is a positive relationship between samples taken and the model's success. Although this seems obvious, it was important to isolate each character, as well as rule out the interaction of certain characters. I.e. it was important to figure out if 'b' and 'd' interacted, or if they had high success despite their similarity. However, we have seen lower success than usual for 'b' in some tests, most likely due to focusing on smaller feature extraction in those models. From what I can deduce from our tests, it is useful to have strides be centrally distributed, meaning: 1-2 (1,1) , 1-2 (5,5), 1 (7,7), and mostly (3,3). This seems to be a winning combination in these CNNs. This is most likely due to the fact that the features between each image that are different are not large or small, but 'medium' as strange as that language sounds. This distribution however gives our model the opportunity to pick up on all possible differences and train for them.
 
 \section{Testing}
 \noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
 \begin{enumerate}[label = (\roman*)]
-\item The truncated test from yesterday led to the following results:
-\item\includegraphics{{new_med_imgs/acc_history}}
-\item\includegraphics{{new_med_imgs/loss_history}}
-\item The results are good, but still seem inconclusive. It does not appear clear that the lag in progress from previous iterations was due to a lack of data, although I think adding data would certainly improve scores.
 \item In order to gauge the effect of increasing size relative to a single sample rather than a change in sample classes (as was done in the previous test), we chose to expand a data set through manual augmentation and comparing it to the same, unaugmented set.
 \item We went back to the original smallset test, which has 4 classes with 1,539 images. Through a program called image transform  that I wrote, I augmented them and got 3,053 images total from the base set.
 \item Examples of augmentation:
@@ -148,10 +140,23 @@ Given the conclusions of the tests as well as plotting the information into grap
 \item Test:
 \item \includegraphics{{new_med_imgs/acc_historytest}}
 \item \includegraphics{{new_med_imgs/loss_historytest}}
-\item The results are not significant, although the decrease in loss is notable. As can be seen in Figure XIV there appears to be a small uptick in accuracy at the end of the training cycle. We intend to test what happens with slightly increased training to 150 epochs.
+\item The results are inconclusive , although the decrease in loss is notable. As can be seen in Figure VII there appears to be a small uptick in accuracy at the end of the training cycle. We intend to test what happens with slightly increased training to 150 epochs.
 \item Results:
 \item\includegraphics{{new_med_imgs/acc_historytest150epochs}}
 \item\includegraphics{{new_med_imgs/loss_historytest150epochs}}
+\item After these tests were performed I moved onto to testing the larger class set, and plot identification rate vs data examples for a clearer conclusion. 
+\item\includegraphics{charts/total-vs-correct}
+\item The following graphic used the previous graphs data to find the relationship between sample sizes and correctness.
+\item\includegraphics {charts/correct-vs-samples}
+\end{enumerate}
+Given the conclusions of the tests as well as plotting the information into graphs, the model needs more data. The previous chart's trendline clearly suggests that there is a positive relationship between samples taken and the model's success. Although this seems obvious, it was important to isolate each character, as well as rule out the interaction of certain characters. I.e. it was important to figure out if 'b' and 'd' interacted, or if they had high success despite their similarity. However, we have seen lower success than usual for 'b' in some tests, most likely due to focusing on smaller feature extraction in those models. From what I can deduce from our tests, it is useful to have strides be centrally distributed, meaning: 1-2 (1,1) , 1-2 (5,5), 1 (7,7), and mostly (3,3). This seems to be a winning combination in these CNNs. This is most likely due to the fact that the features between each image that are different are not large or small, but 'medium' as strange as that language sounds. This distribution however gives our model the opportunity to pick up on all possible differences and train for them.
+
+
+
+\section{Conclusions}
+\noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
+\begin{enumerate}[label = (\roman*)]
+\item Given the data shown the models have reached a point where they are as good as they can get with the data we have. In order to further push the models, and eventually scale up to 70+ classes, we will need more example images. As prviously stated, a good aim would be 3-5x increase in data, and then performing more tests.
 \end{enumerate}
 
 
